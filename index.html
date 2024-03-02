@@ -4,61 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Title</title>
 </head>
 <body>
     <header>
         <div class="container">
             <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Клиентам</a>
-<!--                        <div class="button-link__arrow_1"></div>-->
-<!--                            <ul class="navigation__sublist">-->
-<!--                                <li class="sublist__item"><a href="#" class="sublist__link">О компании</a></li>-->
-<!--                                <li class="sublist__item"><a href="#" class="sublist__link">Клиентам</a></li>-->
-<!--                                <li class="sublist__item"><a href="#" class="sublist__link">Доставка</a></li>-->
-<!--                            </ul>-->
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Услуи</a>
-<!--                        <div class="button-link__arrow_1"></div>-->
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Скидки и акции</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Клиентам</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Контакты</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Цены</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">Наши работы</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#" class="navigation__link">О компании</a>
-                    </li>
-                </ul>
+                <div class="navigation__menu">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <button class="button sublist__button">Клиентам</button>
+                            <div class="button-link__arrow_1"></div>
+                            <ul class="navigation__sublist hidden">
+                                <li class="sublist__item"><a href="#" class="sublist__link">О компании</a></li>
+                                <li class="sublist__item"><a href="#" class="sublist__link">Клиентам</a></li>
+                                <li class="sublist__item"><a href="#" class="sublist__link">Доставка</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Услуги</a>
+                            <div class="button-link__arrow_2"></div>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Скидки и акции</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Клиентам</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Контакты</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Цены</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">Наши работы</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#" class="navigation__link">О компании</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="navigation__contacts">
-                    <button class="button button-green">Звонок</button>
-                    <a class="navigation__number" href="tel:+79587628270">+79587628270</a>
-                    <span>С 8:00 до 18:00 без выходных</span>
+                    <div class="navigation__button">
+                        <button class="button button_green button_call">
+                            <img src="img/phone_logo.svg" alt="Изображение трубки телефона">
+                            <span class="button_call__text">Звонок</span>
+                        </button>
+                    </div>
+                    <div class="navigation__number">
+                        <a class="navigation__number" href="tel:+79587628270">
+                            <img class="number__pic" src="img/phone_logo-black.svg" alt="Изображение трубки телефона">
+                            +7 958 762 82 70
+                        </a>
+                        <br>
+                        <span class="number_hours">С 8:00 до 18:00 без выходных</span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main>
-<!--        <div class="container">-->
-<!--            <img src="#" alt="">-->
-<!--            <span>Название компании</span>-->
-<!--        </div>-->
+        <div class="container">
+            <section class="first">
+                <img src="img/logo.png" alt="Логотип компании">
+                <span>Название компании</span>
+            </section>
+
+        </div>
     </main>
     <footer>
 
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
