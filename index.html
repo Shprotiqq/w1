@@ -4,79 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <title>Title</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navigation">
-                <div class="navigation__menu">
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <button class="button sublist__button">Клиентам</button>
-                            <div class="button-link__arrow_1"></div>
-                            <ul class="navigation__sublist hidden">
-                                <li class="sublist__item"><a href="#" class="sublist__link">О компании</a></li>
-                                <li class="sublist__item"><a href="#" class="sublist__link">Клиентам</a></li>
-                                <li class="sublist__item"><a href="#" class="sublist__link">Доставка</a></li>
-                            </ul>
+<header>
+    <div class="container">
+        <nav class="navigation">
+            <div class="navigation__menu">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <button class="button sublist__button">
+                            <span>Клиентам</span>
+                            <span class="material-symbols-outlined" style="font-weight: 400; font-size: 15.09px; line-height: 34.82px; color: #353535; align-self: center">
+                            keyboard_arrow_down
+                            </span>
+                        </button>
+                        <ul class="navigation__sublist hidden">
+                            <li class="sublist__item"><a href="#" class="sublist__link">О компании</a></li>
+                            <li class="sublist__item"><a href="#" class="sublist__link">Клиентам</a></li>
+                            <li class="sublist__item"><a href="#" class="sublist__link">Доставка</a></li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <button class="button sublist__button">
+                            <span>Услуги</span>
+                            <span class="material-symbols-outlined" style="font-weight: 400; font-size: 15.09px; line-height: 34.82px; color: #353535; align-self: center" >
+                            keyboard_arrow_down
+                            </span>
+                        </button>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Скидки и акции</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Клиентам</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Контакты</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Цены</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">Наши работы</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#" class="navigation__link">О компании</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation__contacts">
+                <div class="navigation__button">
+                    <button class="button button_green button_call">
+                        <img src="img/phone_logo.svg" alt="Изображение трубки телефона">
+                        <span class="button_call__text">Звонок</span>
+                    </button>
+                </div>
+                <div class="navigation__number">
+                    <a class="navigation__number" href="tel:+79587628270">
+                        <img class="number__pic" src="img/phone_logo-black.svg" alt="Изображение трубки телефона">
+                        +7 958 762 82 70
+                    </a>
+                    <br>
+                    <span class="number_hours">с 8:00 до 18:00 без выходных</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <section>
+            <div class="additional_buttons">
+                <div class="company-logo">
+                    <img src="img/logo.png" alt="Логотип компании">
+                    <span class="company_name">
+                        Название<br>
+                        компании
+                    </span>
+                    <span class="company_additional">
+                        Продажа и монтаж<br>
+                        автономной канализации<br>
+                        в Москве и Московской<br>
+                        области
+                    </span>
+                </div>
+                <div class="catalog_button">
+                    <button class="button button_green button_catalog">
+                        <img src="img/catalog.svg" alt="">
+                        <span>Каталог</span>
+                    </button>
+                </div>
+                <div class="additional_features">
+                    <div class="search">
+                        <button class="button button_gray button_search">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12.8346" cy="12.8333" r="8.16667" stroke="#353535" stroke-width="2.33333"/>
+                                <path d="M23.334 23.3333L19.834 19.8333" stroke="#353535" stroke-width="2.33333" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <span>Поиск</span>
+                    </div>
+                    <div class="compare">
+                        <button class="button button_gray button_compare">
+                            <svg width="28" height="25" viewBox="0 0 28 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.93249 1.9516C0.773438 3.11065 0.773438 4.97613 0.773438 8.70707V16.6216C0.773438 20.3525 0.773438 22.218 1.93249 23.3771C3.09155 24.5361 4.95702 24.5361 8.68797 24.5361H19.2407C22.9716 24.5361 24.8371 24.5361 25.9962 23.3771C27.1552 22.218 27.1552 20.3525 27.1552 16.6216V8.70707C27.1552 4.97613 27.1552 3.11065 25.9962 1.9516C24.8371 0.792542 22.9716 0.792542 19.2407 0.792542H8.68797C4.95702 0.792542 3.09155 0.792542 1.93249 1.9516ZM19.24 7.38795C19.9686 7.38795 20.5591 7.97852 20.5591 8.70703V19.2597C20.5591 19.9883 19.9686 20.5788 19.24 20.5788C18.5115 20.5788 17.921 19.9883 17.921 19.2597V8.70703C17.921 7.97852 18.5115 7.38795 19.24 7.38795ZM10.0072 11.3452C10.0072 10.6167 9.41662 10.0261 8.6881 10.0261C7.95959 10.0261 7.36902 10.6167 7.36902 11.3452V19.2598C7.36902 19.9883 7.95959 20.5788 8.6881 20.5788C9.41662 20.5788 10.0072 19.9883 10.0072 19.2598V11.3452ZM15.2832 13.9834C15.2832 13.2549 14.6926 12.6643 13.9641 12.6643C13.2356 12.6643 12.645 13.2549 12.645 13.9834V19.2598C12.645 19.9883 13.2356 20.5789 13.9641 20.5789C14.6926 20.5789 15.2832 19.9883 15.2832 19.2598V13.9834Z"/>
+                            </svg>
+
+                        </button>
+                        <span>Сравнить</span>
+                    </div>
+                    <div class="favorites">
+                        <button class="button button_gray button_favorites">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.84015 14.2313L11.7708 20.7418C12.0095 20.9661 12.1289 21.0782 12.2696 21.1058C12.333 21.1183 12.3982 21.1183 12.4616 21.1058C12.6023 21.0782 12.7217 20.9661 12.9604 20.7418L19.891 14.2313C21.841 12.3994 22.0778 9.38503 20.4378 7.27121L20.1294 6.87374C18.1674 4.34501 14.2293 4.76909 12.8507 7.65756C12.656 8.06558 12.0752 8.06558 11.8805 7.65756C10.5019 4.76909 6.56372 4.34501 4.60177 6.87374L4.2934 7.27121C2.65336 9.38503 2.89016 12.3994 4.84015 14.2313Z"/>
+                            </svg>
+                        </button>
+                        <span>Избранное</span>
+                    </div>
+                </div>
+                <div class="acc">
+                    <button class="button button_gray button_acc">
+                        <img src="img/calc.svg" alt="Иконка калькулятора">
+                        <span>Онлайн расчет</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="main_banner">
+                <div class="banner_info">
+                    <span class="info_title">Септик под ключ в Москве и Московской области</span>
+                    <ul class="info_list">
+                        <li class="info_item">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4251 40.7441C31.5006 40.7441 40.4791 31.7656 40.4791 20.6901C40.4791 16.6051 39.2577 12.8054 37.1602 9.63626L21.2174 27.3505C19.674 29.0655 17.0768 29.3188 15.231 27.9345L7.94822 22.4724C6.96371 21.734 6.76419 20.3373 7.50257 19.3528C8.24095 18.3683 9.63763 18.1688 10.6221 18.9072L17.9049 24.3693L34.2718 6.18377C30.6721 2.74673 25.7951 0.636032 20.4251 0.636032C9.34958 0.636032 0.371094 9.61454 0.371094 20.6901C0.371094 31.7656 9.34958 40.7441 20.4251 40.7441Z" fill="currentColor"></path>
+                            </svg>
+                            <span>Подберем<br> подходящий септик</span>
                         </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Услуги</a>
-                            <div class="button-link__arrow_2"></div>
+                        <li class="info_item">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4251 40.7441C31.5006 40.7441 40.4791 31.7656 40.4791 20.6901C40.4791 16.6051 39.2577 12.8054 37.1602 9.63626L21.2174 27.3505C19.674 29.0655 17.0768 29.3188 15.231 27.9345L7.94822 22.4724C6.96371 21.734 6.76419 20.3373 7.50257 19.3528C8.24095 18.3683 9.63763 18.1688 10.6221 18.9072L17.9049 24.3693L34.2718 6.18377C30.6721 2.74673 25.7951 0.636032 20.4251 0.636032C9.34958 0.636032 0.371094 9.61454 0.371094 20.6901C0.371094 31.7656 9.34958 40.7441 20.4251 40.7441Z" fill="currentColor"></path>
+                            </svg>
+                            <span>Доставим к вам<br> на участок</span>
                         </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Скидки и акции</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Клиентам</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Контакты</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Цены</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">Наши работы</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a href="#" class="navigation__link">О компании</a>
+                        <li class="info_item">
+                            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.4251 40.7441C31.5006 40.7441 40.4791 31.7656 40.4791 20.6901C40.4791 16.6051 39.2577 12.8054 37.1602 9.63626L21.2174 27.3505C19.674 29.0655 17.0768 29.3188 15.231 27.9345L7.94822 22.4724C6.96371 21.734 6.76419 20.3373 7.50257 19.3528C8.24095 18.3683 9.63763 18.1688 10.6221 18.9072L17.9049 24.3693L34.2718 6.18377C30.6721 2.74673 25.7951 0.636032 20.4251 0.636032C9.34958 0.636032 0.371094 9.61454 0.371094 20.6901C0.371094 31.7656 9.34958 40.7441 20.4251 40.7441Z" fill="currentColor"></path>
+                            </svg>
+                            <span>Выполним<br> монтаж под ключ</span>
                         </li>
                     </ul>
-                </div>
-                <div class="navigation__contacts">
-                    <div class="navigation__button">
-                        <button class="button button_green button_call">
-                            <img src="img/phone_logo.svg" alt="Изображение трубки телефона">
-                            <span class="button_call__text">Звонок</span>
+                    <div class="info_buttons">
+                        <button class="button_gray button_calc">
+                            <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17505 0.0939407C6.15755 0.0939407 4.52204 1.72945 4.52204 3.74695L4.52204 3.74974C3.20965 3.75551 2.48973 3.80097 1.95341 4.15933C1.6875 4.33701 1.45919 4.56532 1.28152 4.83123C0.871094 5.44547 0.871094 6.30055 0.871094 8.0107V19.5784C0.871094 21.8744 0.871094 23.0225 1.58438 23.7357C2.29766 24.449 3.44567 24.449 5.7417 24.449H15.4829C17.7789 24.449 18.9269 24.449 19.6402 23.7357C20.3535 23.0225 20.3535 21.8744 20.3535 19.5784V8.0107C20.3535 6.30055 20.3535 5.44547 19.9431 4.83123C19.7654 4.56532 19.5371 4.33701 19.2712 4.15933C18.7343 3.80062 18.0135 3.75542 16.6987 3.74973L16.6987 3.74695C16.6987 1.72945 15.0632 0.0939407 13.0457 0.0939407H8.17505ZM8.17825 3.74402C8.17825 3.07152 8.72342 2.52635 9.39592 2.52635H11.8312C12.5037 2.52635 13.0489 3.07152 13.0489 3.74402C13.0489 4.41652 12.5037 4.96169 11.8312 4.96169H9.39592C8.72342 4.96169 8.17825 4.41652 8.17825 3.74402ZM6.96571 11.0471C6.29321 11.0471 5.74804 11.5922 5.74804 12.2647C5.74804 12.9372 6.29321 13.4824 6.96571 13.4824H14.2716C14.9441 13.4824 15.4893 12.9372 15.4893 12.2647C15.4893 11.5922 14.9441 11.0471 14.2716 11.0471H6.96571ZM6.96571 15.9177C6.29321 15.9177 5.74804 16.4628 5.74804 17.1353C5.74804 17.8078 6.29321 18.353 6.96571 18.353H11.8363C12.5088 18.353 13.054 17.8078 13.054 17.1353C13.054 16.4628 12.5088 15.9177 11.8363 15.9177H6.96571Z" fill="black"/>
+                            </svg>
+
+                            <span>Калькулятор услуги</span>
+                        </button>
+                        <button class="button_gray button_basket">
+                            <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.17505 0.0939407C6.15755 0.0939407 4.52204 1.72945 4.52204 3.74695L4.52204 3.74974C3.20965 3.75551 2.48973 3.80097 1.95341 4.15933C1.6875 4.33701 1.45919 4.56532 1.28152 4.83123C0.871094 5.44547 0.871094 6.30055 0.871094 8.0107V19.5784C0.871094 21.8744 0.871094 23.0225 1.58438 23.7357C2.29766 24.449 3.44567 24.449 5.7417 24.449H15.4829C17.7789 24.449 18.9269 24.449 19.6402 23.7357C20.3535 23.0225 20.3535 21.8744 20.3535 19.5784V8.0107C20.3535 6.30055 20.3535 5.44547 19.9431 4.83123C19.7654 4.56532 19.5371 4.33701 19.2712 4.15933C18.7343 3.80062 18.0135 3.75542 16.6987 3.74973L16.6987 3.74695C16.6987 1.72945 15.0632 0.0939407 13.0457 0.0939407H8.17505ZM8.17825 3.74402C8.17825 3.07152 8.72342 2.52635 9.39592 2.52635H11.8312C12.5037 2.52635 13.0489 3.07152 13.0489 3.74402C13.0489 4.41652 12.5037 4.96169 11.8312 4.96169H9.39592C8.72342 4.96169 8.17825 4.41652 8.17825 3.74402ZM6.96571 11.0471C6.29321 11.0471 5.74804 11.5922 5.74804 12.2647C5.74804 12.9372 6.29321 13.4824 6.96571 13.4824H14.2716C14.9441 13.4824 15.4893 12.9372 15.4893 12.2647C15.4893 11.5922 14.9441 11.0471 14.2716 11.0471H6.96571ZM6.96571 15.9177C6.29321 15.9177 5.74804 16.4628 5.74804 17.1353C5.74804 17.8078 6.29321 18.353 6.96571 18.353H11.8363C12.5088 18.353 13.054 17.8078 13.054 17.1353C13.054 16.4628 12.5088 15.9177 11.8363 15.9177H6.96571Z" fill="black"/>
+                            </svg>
+
+                            <span>Корзина</span>
                         </button>
                     </div>
-                    <div class="navigation__number">
-                        <a class="navigation__number" href="tel:+79587628270">
-                            <img class="number__pic" src="img/phone_logo-black.svg" alt="Изображение трубки телефона">
-                            +7 958 762 82 70
-                        </a>
-                        <br>
-                        <span class="number_hours">С 8:00 до 18:00 без выходных</span>
-                    </div>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <section class="first">
-                <img src="img/logo.png" alt="Логотип компании">
-                <span>Название компании</span>
-            </section>
+                <div class="banner_img">
+                    <img src="img/main_img.png" alt="">
+                    <button class="button_gray button_arrow-up">
+                        <img src="img/arrow_up.svg" alt="">
+                    </button>
+                    <button class="button_gray button_social">
+                        <img src="img/whatsup_icon.svg" alt="">
+                    </button>
+                    <button class="button_gray button_basket-small">
+                        <img src="img/bag_icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<footer>
 
-        </div>
-    </main>
-    <footer>
-
-    </footer>
-    <script src="script.js"></script>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

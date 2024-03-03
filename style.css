@@ -55,10 +55,16 @@ body {
 .button {
     border: none;
     color: #fff;
+    font-family: "Vela Sans", sans-serif;
 }
 
 .button_green {
     background-color: #00CA81;
+}
+
+.button_gray {
+    background-color: #F6F6F6;
+    color: #353535;
 }
 
 .container {
@@ -80,9 +86,9 @@ body {
     content: "";
     position: absolute;
     background-color: #F6F6F6;
-    width: 370px;
+    width: 361.5px;
     height: 82px;
-    left: -370px;
+    left: -361.5px;
     top: 0;
 }
 
@@ -90,13 +96,15 @@ body {
     content: "";
     position: absolute;
     background-color: #F6F6F6;
-    width: 377px;
+    width: 361.5px;
     height: 82px;
     top: 0;
-    right: -377px;
+    right: -361.5px;
 }
 
 .sublist__button {
+    padding: 0;
+    display: flex;
     color: #353535;
     font-size: 15px;
     line-height: 21px;
@@ -130,13 +138,16 @@ body {
 }
 
 .navigation__list {
+    width: 762px;
+    height: 22px;
     display: flex;
+    justify-content: space-between;
 }
 
 .navigation__item {
     display: flex;
     justify-content: space-between;
-    margin-right: 19.6px;
+    gap: 7px;
 }
 
 .navigation__item:last-child {
@@ -216,12 +227,16 @@ body {
 }
 
 .button_call {
-    padding: 17.87px 21.22px;
+    display: flex;
     border-radius: 13.4px;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    margin-right: 12px;
+    font-size: 15.97px;
+    width: 122px;
+    height: 53.75px;
+    line-height: 18.96px;
+    margin-right: 13px;
+    align-items: center;
+    justify-content: center;
 }
 
 .button_call__text {
@@ -229,10 +244,15 @@ body {
 }
 
 .navigation__number {
+    display: flex;
+    width: 226.52px;
     font-weight: 600;
     font-size: 21px;
     line-height: 29.5px;
     color: #000;
+    flex-wrap: wrap;
+    align-items: center;
+    text-decoration-thickness: 1px;
 }
 
 .number_hours {
@@ -244,24 +264,266 @@ body {
     margin-right: 8.9px;
 }
 
-.first {
-    height: 139px;
-    background-color: #E8E8E8;
-}
-
 .hidden {
     display: none;
 }
 
-.arrow_animation-1 {
-    top: 30%;
-    transform: scaleY(-1);
-    transition: transform 0.5s linear;
+/*.arrow_animation-1 {*/
+/*    top: 30%;*/
+/*    transform: scaleY(-1);*/
+/*    transition: transform 0.5s linear;*/
+/*}*/
+
+/*.arrow_animation-2 {*/
+/*    transform: scaleY(1);*/
+/*    transition: transform 0.5s linear;*/
+/*}*/
+
+.additional_buttons {
+    height: 139px;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
 }
 
-.arrow_animation-2 {
-    transform: scaleY(1);
-    transition: transform 0.5s linear;
+.material-symbols-outlined {
+    font-weight: 400;
+    font-size: 15.09px;
+    line-height: 34.82px;
 }
 
+.company-logo {
+    width: 358px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.company_name {
+    padding-left: 12px;
+    color: #000;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 23px;
+    letter-spacing: -1px;
+}
+
+.company_additional {
+    padding-left: 21px;
+    color: #353535;
+    font-weight: 300;
+    font-size: 13.6px;
+    line-height: 20px;
+}
+
+.additional_features {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20.2px;
+    gap: 19px;
+    align-items: center;
+    letter-spacing: -1px;
+    width: 254px;
+    height: 68px;
+    margin-left: 80px;
+}
+
+.catalog_button {
+    width: 152px;
+    height: 54px;
+    margin-left: 50px;
+}
+
+.button_catalog {
+    width: 152px;
+    height: 54px;
+    border-radius: 13.65px;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: -1px;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search:hover,
+.search:hover svg {
+    color: #00CA81;
+    transition: color 0.3s;
+}
+
+.button_search {
+    padding: 9px 8px;
+    border-radius: 10.79px;
+}
+
+.compare {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compare:hover,
+.compare:hover svg {
+    color: #00CA81;
+    transition: color 0.3s;
+}
+
+.button_compare {
+    padding: 10px 9px;
+    border-radius: 10.79px;
+}
+
+.favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.67px;
+}
+
+.favorites:hover,
+.favorites:hover svg {
+    color: #00CA81;
+    transition: color 0.3s;
+}
+
+.button_favorites {
+    padding: 10px 11px;
+    border-radius: 10.79px;
+}
+
+.acc {
+    margin-left: 81px;
+}
+
+.button_acc {
+    display: flex;
+    color: #353535;
+    border-radius: 15.71px;
+    width: 205px;
+    height: 63px;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18.72px;
+    line-height: 18.22px;
+    align-items: center;
+    letter-spacing: -1px;
+    gap: 4.68px;
+}
+
+.main_banner {
+    display: flex;
+    margin-top: 64px;
+}
+
+.banner_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 565.78px;
+    height: 511.89px;
+}
+
+.info_title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
+.info_list {
+    position: relative;
+    height: 166.41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.info_item {
+    gap: 12.8px;
+    display: flex;
+    align-items: center;
+    height: 75.95px;
+    border: solid 0.85px #E0E0E0;
+    border-radius: 16.21px;
+    font-weight: 500;
+    font-size: 21.33px;
+    line-height: 29.87px;
+    padding: 0 15.36px;
+}
+
+.info_item:hover svg{
+    color: #00CA81;
+    transition: color 0.3s;
+}
+
+.info_item:first-child {
+    width: 269px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info_item:nth-child(2) {
+    width: 220px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+}
+
+.info_item:last-child {
+    width: 234px;
+    position: absolute;
+    top: 90px;
+    left: 265px;
+}
+
+.info_buttons {
+    display: flex;
+    height: 80.7px;
+    gap: 17.12px;
+}
+
+.button_calc {
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 307.66px;
+    height: 80.7px;
+    border-radius: 20.12px;
+}
+
+.button_calc span{
+    font-size: 23.99px;
+    font-weight: 600;
+    line-height: 28.46px;
+    letter-spacing: -1px;
+}
+
+.button_basket {
+    border: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 183.83px;
+    height: 80.7px;
+    border-radius: 20.12px;
+}
+
+.button_basket span {
+    font-size: 23.99px;
+    font-weight: 600;
+    line-height: 28.46px;
+    letter-spacing: -1px;
+}
+
+.banner_img {
+    margin-left: 102.69px;
+}
