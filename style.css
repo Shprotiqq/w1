@@ -67,6 +67,11 @@ body {
     color: #353535;
 }
 
+.button_black {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .container {
     max-width: 1180px;
     width: 100%;
@@ -351,10 +356,13 @@ body {
     align-items: center;
 }
 
-.search:hover,
-.search:hover svg {
+.search:hover {
     color: #00CA81;
-    transition: color 0.3s;
+    transition: fill 0.3s;
+}
+
+.search:hover svg {
+    fill: #00CA81;
 }
 
 .button_search {
@@ -383,7 +391,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6.67px;
 }
 
 .favorites:hover,
@@ -414,6 +421,13 @@ body {
     align-items: center;
     letter-spacing: -1px;
     gap: 4.68px;
+}
+
+.button_acc:hover,
+.button_acc:hover svg {
+    background-color: #00CA81;
+    color: #ffffff;
+    transition: color 0.3s;
 }
 
 .main_banner {
@@ -507,6 +521,13 @@ body {
     letter-spacing: -1px;
 }
 
+.button_calc:hover,
+.button_calc:hover svg {
+    background-color: #00CA81;
+    color: #ffffff;
+    transition: background-color, color 0.3s;
+}
+
 .button_basket {
     border: none;
     display: flex;
@@ -524,6 +545,231 @@ body {
     letter-spacing: -1px;
 }
 
+.button_basket:hover,
+.button_basket:hover svg {
+    background-color: #00CA81;
+    color: #ffffff;
+    transition: background-color, color 0.3s;
+}
+
 .banner_img {
     margin-left: 102.69px;
+    position: relative;
 }
+
+.banner_buttons button {
+    border: none;
+    display: flex;
+    position: absolute;
+    width: 96.65px;
+    height: 96.65px;
+    border-radius: 50%;
+    right: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_arrow-up {
+    top: 1px;
+}
+
+.button_social {
+    top: 117px;
+    background-color: #00CA81;
+}
+
+.button_basket-small {
+    top: 235px;
+}
+
+.quiz_bottom {
+    position: relative;
+}
+
+.quiz_card {
+    position: relative;
+    width: 810.41px;
+    height: 578.88px;
+    border-radius: 18.12px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz_number {
+    font-weight: 700;
+    font-size: 40.27px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+    padding-top: 42.29px;
+    padding-left: 43.29px;
+}
+
+.quiz_variants {
+    display: flex;
+    gap: 17.07px;
+    justify-content: center;
+    margin-top: 48.75px;
+}
+
+.variants_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 228.22px;
+    height: 237.52px;
+    position: relative;
+}
+
+.variants_item svg {
+    position: absolute;
+    bottom: 56px;
+    left: 91.65px;
+}
+
+.variants_item span {
+    font-weight: 600;
+    font-size: 26.96px;
+    line-height: 55.93px;
+    letter-spacing: -1px;
+    padding-top: 22.46px;
+}
+
+.quiz_buttons {
+    display: flex;
+    gap: 6.76px;
+    padding-top: 62.49px;
+    padding-left: 43.29px;
+}
+
+.button-back {
+    display: flex;
+    width: 126.13px;
+    height: 64.43px;
+    border-radius: 16.07px;
+    font-weight: 600;
+    font-size: 19.15px;
+    line-height: 22.73px;
+    letter-spacing: -1px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-back:hover {
+    background-color: #00CA81;
+    transition: background-color 0.3s;
+}
+
+.button-next {
+    display: flex;
+    width: 138.22px;
+    height: 64.43px;
+    border-radius: 16.07px;
+    font-weight: 600;
+    font-size: 19.15px;
+    line-height: 22.73px;
+    letter-spacing: -1px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-next:hover {
+    background-color: #00CA81;
+    transition: background-color 0.3s;
+}
+
+.additional_card {
+    background-color: #F6F6F6;
+    width: 329.2px;
+    height: 578.88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+.additional_card-info {
+    display: flex;
+    padding-top: 12.08px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_img {
+    background-color: #D9D9D9;
+    width: 120.81px;
+    height: 120.81px;
+    border-radius: 50%;
+}
+
+.additional_name {
+    font-weight: 700;
+    font-size: 25.41px;
+    line-height: 39.55px;
+    letter-spacing: -1px;
+    padding-top: 15px;
+}
+
+.additional_jobtitle {
+    font-weight: 400;
+    font-size: 20.13px;
+    line-height: 39.55px;
+    letter-spacing: -1px;
+    padding-top: -3px;
+
+}
+
+.additional_comment {
+    padding-top: 3px;
+    font-weight: 400;
+    font-size: 15.1px;
+    line-height: 21.14px;
+}
+
+.prize_list {
+    padding-top: 36.24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.prize_title {
+    font-weight: 500;
+    font-size: 20.13px;
+    line-height: 39.55px;
+    letter-spacing: -1px;
+    text-decoration: underline #000000;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7px;
+}
+
+.prize_pool {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.prize_item {
+    width: 274.84px;
+    height: 65.44px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17.39px;
+    line-height: 18.6px;
+    letter-spacing: -1px;
+    border-radius: 38.26px;
+    background-image: url("img/prize_item_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.prize_item svg {
+    padding-left: 15px;
+}
+
