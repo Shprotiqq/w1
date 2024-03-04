@@ -582,6 +582,17 @@ body {
     top: 235px;
 }
 
+.quiz {
+    margin-top: 86.13px;
+}
+
+.quiz_title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
 .quiz_bottom {
     position: relative;
 }
@@ -642,7 +653,11 @@ body {
     padding-left: 43.29px;
 }
 
-.button-back {
+.button-quiz {
+    color: #ffffff;
+}
+
+.button-prev {
     display: flex;
     width: 126.13px;
     height: 64.43px;
@@ -653,11 +668,7 @@ body {
     letter-spacing: -1px;
     align-items: center;
     justify-content: center;
-}
-
-.button-back:hover {
     background-color: #00CA81;
-    transition: background-color 0.3s;
 }
 
 .button-next {
@@ -671,11 +682,16 @@ body {
     letter-spacing: -1px;
     align-items: center;
     justify-content: center;
+    background-color: #00CA81;
 }
 
-.button-next:hover {
-    background-color: #00CA81;
-    transition: background-color 0.3s;
+.button-quiz.active {
+    transform: scale(0.98);
+}
+
+.button-quiz.disabled {
+    background-color: #000;
+    cursor: not-allowed;
 }
 
 .additional_card {
@@ -773,3 +789,67 @@ body {
     padding-left: 15px;
 }
 
+.progress_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 1162.77px;
+    margin-top: 43.71px;
+    margin-bottom: 74.5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.progress_bar::before {
+    content: "";
+    background-color: #F6F6F6;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 28.19px;
+    transform: translateY(-50%);
+    width: 100%;
+    border-radius: 29.2px;
+    z-index: -1;
+}
+
+.current_progress {
+    background-color: #00CA81;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 28.19px;
+    width: 0%;
+    border-radius: 29.2px;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.progress_circle {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 50.34px;
+    height: 50.34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #F6F6F6;
+    transition: 0.4s ease;
+    font-weight: 600;
+    font-size: 37.39px;
+    line-height: 44.76px;
+}
+
+.active {
+    background-color: #00CA81;
+    border-color: #00CA81;
+}
+
+.progress_circle-prize {
+    width: 78.52px;
+    height: 78.52px;
+    background-color: #FF9900;
+}
