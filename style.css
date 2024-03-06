@@ -608,12 +608,24 @@ body {
 }
 
 .quiz_number {
+    display: flex;
+    align-items: center;
     font-weight: 700;
     font-size: 40.27px;
     line-height: 62.67px;
     letter-spacing: -1px;
     padding-top: 42.29px;
     padding-left: 43.29px;
+    border: none;
+}
+
+.quiz_number input {
+    background-color: #F6F6F6;
+    border: none;
+    font-weight: 700;
+    font-size: 40.27px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
 }
 
 .quiz_variants {
@@ -689,7 +701,7 @@ body {
     transform: scale(0.98);
 }
 
-.button-quiz.disabled {
+.button-quiz:disabled {
     background-color: #000;
     cursor: not-allowed;
 }

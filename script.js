@@ -2,8 +2,8 @@ const link = document.querySelector('.sublist__button')
 const subList = document.querySelector('.navigation__sublist')
 const arrow = document.querySelector('.button-link__arrow_1')
 const progress = document.getElementById("progress")
-const prev = document.querySelector(".button-prev")
-const next = document.querySelector(".button-next")
+let prev = document.querySelector(".button-prev")
+let next = document.querySelector(".button-next")
 const circles = document.querySelectorAll(".progress_circle")
 let currentActive = 1
 
@@ -32,6 +32,7 @@ function reverseArrowReset (event) {
         arrow.classList.add("arrow_animation-1")
     }
 }
+
 
 link.addEventListener ("click", sublistShow);
 link.addEventListener("click", reverseArrow);
@@ -66,6 +67,21 @@ const update = () => {
         next.disabled = false;
     }
 };
+prev.addEventListener("click", function (){
+    let number = document.querySelector("#number");
+    let result = Number(number.innerHTML) - 1;
+    if (result < 0) {
 
+    } else {
+        number.innerHTML = result;
+    }
+});
+
+next.addEventListener("click", function (){
+    let number = document.querySelector("#number");
+    let result = Number(number.innerHTML) + 1;
+
+    number.innerHTML = result;
+});
 
 
