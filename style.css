@@ -1203,6 +1203,7 @@ body {
 }
 
 .form__name-input input {
+    padding-left: 26.67px;
     border: none;
     width: 337.45px;
     height: 60.52px;
@@ -1215,11 +1216,12 @@ body {
 
 
 
-.form__email-input {
+.form__phone-input {
     padding-bottom: 27.69px;
 }
 
-.form__email-input input {
+.form__phone-input input {
+    padding-left: 26.67px;
     border: none;
     width: 337.45px;
     height: 60.52px;
@@ -1239,4 +1241,54 @@ body {
     width: 183.6px;
     height: 53.83px;
     border-radius: 11.34px;
+}
+
+.prices-main {
+    padding-top: 76.32px;
+}
+
+.prices__top {
+    display: flex;
+    flex-direction: column;
+}
+
+.prices_title {
+    font-weight: 700;
+    font-size: 53.34px;
+    line-height: 63.85px;
+    letter-spacing: -1px;
+    padding-bottom: 29.63px;
+}
+
+.info_text {
+    font-weight: 300;
+    font-size: 25.17px;
+    line-height: 38.76px;
+    color: #353535;
+    padding-bottom: 22.68px;
+}
+
+.button_download {
+    font-weight: 600;
+    font-size: 20.51px;
+    line-height: 16.04px;
+    letter-spacing: -1px;
+    padding: 15.12px 41.03px 15.12px 41.03px;
+    border-radius: 11.34px;
+}
+
+.prices_tabs {
+    padding-top: 51.31px;
+}
+
+.tab__header {
+    font-weight: 700;
+    font-size: 25.17px;
+    line-height: 38.76px;
+    border-radius: 18.12px;
+    background-color: #F6F6F6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24.17px 37.25px 28.45px 36.24px;
 }
