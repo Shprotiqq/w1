@@ -1131,3 +1131,112 @@ body {
     left: 50%;
     transform: translate(-25px, -25px);
 }
+
+.price_list {
+  padding-top: 75.5px;
+}
+
+.application_form {
+    border-radius: 18.46px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideinfo {
+    display: flex;
+    gap: 22px;
+}
+
+.sideinfo__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-bottom {
+    padding-top: 50.48px;
+    gap: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__title {
+    padding-top: 52.31px;
+    padding-left: 80px;
+    font-weight: 700;
+    font-size: 53.34px;
+    line-height: 63.85px;
+    letter-spacing: -1px;
+}
+
+.about__name {
+    font-weight: 700;
+    font-size: 30.12px;
+    line-height: 46.88px;
+    letter-spacing: -1px;
+}
+
+.about__jobtitle {
+    font-weight: 400;
+    font-size: 23.87px;
+    line-height: 46.88px;
+    letter-spacing: -1px;
+}
+
+.about__link a {
+    font-weight: 400;
+    font-size: 17.9px;
+    line-height: 25.06px;
+    color: #00CA81;
+}
+
+.about__add {
+    font-weight: 300;
+    font-size: 18.46px;
+    line-height: 22.57px;
+    color: #353535;
+}
+
+.form__name-input {
+    padding-bottom: 14.36px;
+}
+
+.form__name-input input {
+    border: none;
+    width: 337.45px;
+    height: 60.52px;
+    border-radius: 16.41px;
+    font-weight: 300;
+    font-size: 18.46px;
+    line-height: 22.57;
+    color: #565656;
+}
+
+
+
+.form__email-input {
+    padding-bottom: 27.69px;
+}
+
+.form__email-input input {
+    border: none;
+    width: 337.45px;
+    height: 60.52px;
+    border-radius: 16.41px;
+    font-weight: 300;
+    font-size: 18.46px;
+    line-height: 22.57;
+    color: #565656;
+}
+
+.button_form {
+    border: none;
+    font-weight: 600;
+    font-size: 20.51px;
+    line-height: 16.04px;
+    letter-spacing: -1px;
+    width: 183.6px;
+    height: 53.83px;
+    border-radius: 11.34px;
+}
