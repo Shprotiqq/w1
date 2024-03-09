@@ -1,39 +1,27 @@
 const link = document.querySelector('.sublist__button')
 const subList = document.querySelector('.navigation__sublist')
-const arrow = document.querySelector('.button-link__arrow_1')
+const arrow = document.querySelector('.material-symbols-outlined')
 
 
 
 function sublistShow () {
     if (subList.classList.contains("hidden") === true) {
         subList.classList.remove("hidden");
-        subList.classList.add("sublist_animation")
-    } else {
-        subList.classList.add("hidden");
-    }
-}
-
-function reverseArrow () {
-    if (subList.classList.contains("hidden") === false) {
-        arrow.classList.add("arrow_animation-1")
+        arrow.classList.toggle("material-symbols-outlined-transform-transform")
     }
 }
 
 function reverseArrowReset () {
-    if (arrow.classList.contains("arrow_animation-1") === true) {
-        arrow.classList.remove("arrow_animation-1")
-        arrow.classList.add("arrow_animation-2")
-    } else {
-        arrow.classList.remove("arrow_animation-2")
-        arrow.classList.add("arrow_animation-1")
+    if (arrow.classList.contains("material-symbols-outlined-transform") === true) {
+        arrow.classList.remove("material-symbols-outlined-transform")
     }
 }
 
 
 link.addEventListener ("click", sublistShow);
-link.addEventListener("click", reverseArrow);
 link.addEventListener("click", reverseArrowReset)
 
 // НЕ РАБОТАЕТ
+
 
 
