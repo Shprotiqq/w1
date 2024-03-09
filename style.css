@@ -1417,3 +1417,227 @@ body {
 .chars_list-active {
     display: block;
 }
+
+.tariff_block {
+    padding-top: 75.5px;
+}
+
+.tariff_block-title {
+    font-weight: 700;
+    font-size: 53.34px;
+    line-height: 63.85px;
+    letter-spacing: -1px;
+}
+
+.cards_block {
+    display: flex;
+    gap: 27.18px;
+    padding-top: 50.77px;
+}
+
+.card_option {
+    width: 374.5px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_option-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 29.2px 31.21px 30.2px 29.2px;
+}
+
+.card_option__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_option__title-top {
+    font-weight: 700;
+    font-size: 30.12px;
+    line-height: 46.88px;
+    letter-spacing: -1px;
+}
+
+.card_option__title-bottom {
+    font-weight: 400;
+    font-size: 23.87px;
+    line-height: 46.88px;
+    letter-spacing: -1px;
+}
+
+.card_option__desc {
+    display: flex;
+    width: 314.1px;
+    height: 158px;
+    padding-top: 14.41px;
+    font-weight: 300;
+    font-size: 18.46px;
+    line-height: 22.57px;
+    color: #353535;
+    justify-content: center;
+}
+
+.adv_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10.14px;
+    padding-top: 31.26px;
+}
+
+.adv_list__item {
+    width: 314.1px;
+    display: flex;
+    align-items: center;
+    gap: 8.94px;
+    font-weight: 500;
+    font-size: 14.91px;
+    line-height: 20.87px;
+    border: 0.6px solid #000000;
+    border-radius: 11.33px;
+    padding: 5.37px 10.73px;
+}
+
+.option_bottom {
+    height: 164.51px;
+    padding-top: 26.78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.option_bottom-expand {
+    position: relative;
+    font-weight: 500;
+    font-size: 17.89px;
+    line-height: 25.04px;
+}
+
+.option_bottom-expand::before {
+    position: absolute;
+    content: "";
+    background-color: #D9D9D9;
+    width: 86.98px;
+    height: 1.21px;
+    left: -120px;
+    top: 50%;
+}
+
+.option_bottom-expand::after {
+    position: absolute;
+    content: "";
+    background-color: #D9D9D9;
+    width: 86.98px;
+    height: 1.21px;
+    right: -120px;
+    top: 50%;
+}
+
+.option_bottom-term {
+    font-weight: 500;
+    font-size: 23.87px;
+    line-height: 46.88px;
+    letter-spacing: -1px;
+}
+
+.button-select {
+    display: flex;
+    align-items: center;
+    border-radius: 16.07px;
+    padding: 21.42px 35.24px;
+    font-weight: 600;
+    font-size: 19.15px;
+    line-height: 22.73px;
+    letter-spacing: -1px;
+}
+
+.button-select svg {
+  padding-left: 4.8px;
+}
+
+.form_block {
+    padding-top: 50.34px;
+}
+
+.form_block-content {
+    background-color: #F6F6F6;
+}
+
+.form_block-title {
+    font-weight: 700;
+    font-size: 53.11px;
+    line-height: 63.57px;
+    letter-spacing: -1px;
+}
+
+.tariff_block-desc {
+    font-weight: 300;
+    font-size: 18.38px;
+    line-height: 22.47px;
+    color: #353535;
+}
+
+.form_block-input_name input {
+    padding-left: 26.55px;
+    border: none;
+    width: 336px;
+    height: 60.26px;
+    border-radius: 16.34px;
+    font-weight: 300;
+    font-size: 18.38px;
+    line-height: 22.47px;
+    color: #565656;
+}
+
+.form_block-input_phone input {
+    padding-left: 26.55px;
+    border: none;
+    width: 336px;
+    height: 60.26px;
+    border-radius: 16.34px;
+    font-weight: 300;
+    font-size: 18.38px;
+    line-height: 22.47px;
+    color: #565656;
+}
+
+.form_block-checkbox {
+    display: flex;
+    height: 30.2px;
+    align-items: center;
+}
+
+.form_block-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form_block-checkbox label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 41px;
+}
+
+.form_block-checkbox span {
+    width: 30.2px;
+    height: 30.2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #D9D9D9;
+    border-radius: 5.03px;
+}
+
+.form_block-checkbox label input:checked ~ span {
+    background-color: #00CA81;
+}
+
