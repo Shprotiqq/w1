@@ -59,6 +59,10 @@ body {
     font-family: "Vela Sans", sans-serif;
 }
 
+.button:active {
+    transform: translateY(5px);
+}
+
 .button_green {
     background-color: #00CA81;
 }
@@ -843,6 +847,7 @@ body {
 
 .catalog__buttons {
     display: flex;
+    flex-wrap: wrap;
     padding-top: 50.76px;
     gap: 14.09px;
 }
@@ -1088,6 +1093,10 @@ body {
     color: #000000;
     text-decoration: underline;
     text-decoration-thickness: 1px;
+}
+
+.action-item:hover {
+    color: #353535;
 }
 
 .portfolio {
@@ -1431,6 +1440,7 @@ body {
 
 .cards_block {
     display: flex;
+    flex-wrap: wrap;
     gap: 27.18px;
     padding-top: 50.77px;
 }
@@ -1563,10 +1573,16 @@ body {
 
 .form_block {
     padding-top: 50.34px;
+    position: relative;
+    padding-bottom: 67.95px;
 }
 
 .form_block-content {
+    padding-left: 73.5px;
+    padding-top: 56.38px;
     background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
 }
 
 .form_block-title {
@@ -1577,10 +1593,15 @@ body {
 }
 
 .tariff_block-desc {
+    padding-top: 35.36px;
     font-weight: 300;
     font-size: 18.38px;
     line-height: 22.47px;
     color: #353535;
+}
+
+.form_block-input_name {
+
 }
 
 .form_block-input_name input {
@@ -1593,6 +1614,10 @@ body {
     font-size: 18.38px;
     line-height: 22.47px;
     color: #565656;
+}
+
+.form_block-input_phone {
+    padding-top: 14.3px;
 }
 
 .form_block-input_phone input {
@@ -1608,6 +1633,7 @@ body {
 }
 
 .form_block-checkbox {
+    padding-top: 23px;
     display: flex;
     height: 30.2px;
     align-items: center;
@@ -1631,7 +1657,7 @@ body {
     width: 30.2px;
     height: 30.2px;
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
     background-color: #D9D9D9;
     border-radius: 5.03px;
@@ -1641,3 +1667,397 @@ body {
     background-color: #00CA81;
 }
 
+.requirements_list {
+    position: absolute;
+    top: 243.64px;;
+    right: 148.5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.requirements_list-item {
+    display: flex;
+    align-items: center;
+    gap: 9.16px;
+    font-weight: 400;
+    font-size: 20.13px;
+    line-height: 54.3px;
+    color: #353535;
+}
+
+.form__button {
+    padding-top: 26.44px;
+}
+
+.company_about {
+    padding-top: 75.5px;
+}
+.about-title {
+    font-weight: 700;
+    font-size: 53.11px;
+    line-height: 64px;
+    letter-spacing: -1px;
+}
+
+.about_general {
+    padding-top: 60.84px;
+    display: flex;
+    gap: 68.5px;
+}
+
+.general-left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.general_name-name {
+    padding-top: 19.13px;
+    font-weight: 700;
+    font-size: 36.24px;
+    line-height: 57px;
+    letter-spacing: -1px;
+}
+
+.general_name-jobtitle {
+    font-weight: 400;
+    font-size: 28.72px;
+    line-height: 57px;
+    letter-spacing: -1px;
+    padding-bottom: 12.5px;
+}
+.button-letter {
+    width: 172.6px;
+    height: 53.4px;
+    border-radius: 11.34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20.51px;
+    line-height: 16px;
+    letter-spacing: -1px;
+}
+
+.general_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.general_desc-title {
+    font-weight: 600;
+    font-size: 30.12px;
+    line-height: 46.88px;
+    letter-spacing: -0.5px;
+}
+
+.general_desc-desc {
+    width: 602px;
+    font-weight: 300;
+    font-size: 20.51px;
+    line-height: 30.2px;
+    color: #353535;
+}
+
+.green_text {
+    color: #00CA81;
+}
+
+.bold_text {
+    font-weight: 700;
+}
+
+.about_team {
+    padding-top: 88.23px;
+}
+
+.team-title {
+    font-weight: 700;
+    font-size: 53.11px;
+    line-height: 63.57px;
+    letter-spacing: -1px;
+}
+
+.team_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px 20.13px;
+    padding-top: 50.89px;
+}
+
+.team_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.team_card-name {
+    padding-top: 22.15px;
+    font-weight: 700;
+    font-size: 29.47px;
+    line-height: 45.86px;
+    letter-spacing: -1px;
+}
+
+.team_card-jobtitle {
+    font-weight: 400;
+    font-size: 23.35px;
+    line-height: 45.86px;
+    letter-spacing: -1px;
+}
+
+.team_card-exp {
+    font-weight: 600;
+    font-size: 25.17px;
+    line-height: 45.86px;
+    letter-spacing: -1px;
+}
+
+.reviews {
+    padding-top: 69.1px;
+}
+
+.reviews-title {
+    font-weight: 700;
+    font-size: 53.11px;
+    line-height: 63.57px;
+    letter-spacing: -1px;
+}
+
+.reviews_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20.14px;
+    padding-top: 50.76px;
+}
+
+.reviews_column-title {
+    font-weight: 700;
+    font-size: 35.24px;
+    line-height: 45.86px;
+    letter-spacing: -1px;
+}
+
+.reviews_column-rating {
+    display: flex;
+    gap: 5.9px;
+    align-items: center;
+}
+
+.reviews_column-rating span {
+    font-weight: 600;
+    font-size: 30.2px;
+    line-height: 45.86px;
+    letter-spacing: -1px;
+}
+
+.review_block {
+    display: flex;
+    flex-direction: column;
+    gap: 15.1px;
+    padding-top: 26.18px;
+}
+
+.review_block-card {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 374.5px;
+    height: 258.73px;
+    border-radius: 18.12px;
+}
+
+.review_block-card-content {
+    width: 326.18px;
+    height: 201.7px;
+}
+
+.review_top {
+    display: flex;
+    gap: 28px;
+    padding-left: 24.16px;
+}
+
+.review_top-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.review_top-name {
+    font-weight: 700;
+    font-size: 20.17px;
+    line-height: 31.39px;
+    letter-spacing: -1px;
+}
+
+.review_top-rate {
+    gap: 5px;
+    display: flex;
+    font-weight: 400;
+    font-size: 15.98px;
+    line-height: 31.39px;
+    letter-spacing: -1px;
+    align-items: center;
+}
+
+.review_card-top-date {
+    font-weight: 400;
+    font-size: 15.98px;
+    line-height: 31.39px;
+    letter-spacing: -1px;
+}
+
+.review_bottom {
+    padding-left: 24.16px;
+    padding-top: 17.81px;
+}
+
+.review_bottom-text {
+    font-weight: 300;
+    font-size: 15.78px;
+    line-height: 19.29px;
+    color: #1E1E1E;
+}
+
+.certificates {
+    padding-top: 75.51px;
+}
+
+.certificates-title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
+.certificates-block {
+    padding-top: 50.76px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15.1px;
+}
+
+.delivery {
+    padding-top: 75.85px;
+}
+
+.delivery_title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
+.delivery_desc {
+    display: flex;
+    width: 560.75px;
+    padding-top: 50.76px;
+    font-weight: 300;
+    font-size: 22.15px;
+    line-height: 30.2px;
+    color: #1E1E1E;
+}
+
+.delivery_action {
+    padding-top: 40.08px;
+}
+
+.delivery_action-block {
+    background-color: #F6F6F6;
+    border-radius: 29.42px;
+}
+
+.delivery_action-btn_area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20.13px;
+    justify-content: center;
+    padding-top: 49.33px;
+    padding-bottom: 47.52px;
+}
+
+.button_delivery {
+    font-weight: 500;
+    font-size: 20.13px;
+    line-height: 77.67px;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+    padding: 0;
+}
+
+.btn_area-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.information {
+    padding-top: 75.51px;
+}
+
+.guarantees_title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 56.4px;
+    letter-spacing: -1px;
+}
+
+.guarantees_main {
+    padding-top: 50.72px;
+    display: flex;
+    gap: 90px;
+}
+
+.guarantees_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 374.5px;
+    height: 374.5px;
+    border-radius: 13.96px;
+    background-color: #F6F6F6;
+}
+
+.guarantees_desc {
+    width: 620.14px;
+    font-weight: 300;
+    font-size: 20.13px;
+    line-height: 30.2px;
+}
+
+.information_payment {
+    padding-top: 75.5px;
+}
+
+.payment-title {
+    font-weight: 700;
+    font-size: 52.35px;
+    line-height: 56.4px;
+    letter-spacing: -1px;
+}
+.payment_main {
+    padding-top: 50.73px;
+    display: flex;
+    gap: 90.6px;
+}
+
+.payment_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 374.5px;
+    height: 374.5px;
+    border-radius: 13.96px;
+    background-color: #F6F6F6;
+}
+
+.payment_desc {
+    display: flex;
+    flex-direction: column;
+    gap: 30.24px;
+    width: 620.14px;
+    font-weight: 300;
+    font-size: 20.13px;
+    line-height: 30.2px;
+}
