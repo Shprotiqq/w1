@@ -114,7 +114,7 @@ body {
     right: -361.5px;
 }
 
-.sublist__button {
+.navigation__button {
     padding: 0;
     display: flex;
     color: #353535;
@@ -2168,6 +2168,7 @@ body {
     width: 143.67px;
     height: 42.12px;
     display: flex;
+    gap: 2.64px;
     justify-content: center;
     align-items: center;
     font-weight: 600;
@@ -2599,6 +2600,65 @@ body {
     color: #8B8B8B;
 }
 
-.call_form-active {
+.catalog_area {
+    z-index: 2;
+    position: absolute;
+    left: -361.5px;
+    top: 95px;
+    width: 1920px;
+    height: 556px;
+    display: none;
+    gap: 117px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.catalog_area-left {
+    padding-top: 48px;
+    padding-left: 371px;
+    width: 228px;
+    height: 278px;
+    position: relative;
+}
+
+.catalog_area-left::before {
+    position: absolute;
+    top: 9px;
+    left: 667px;
+    content: "";
+    width: 1px;
+    height: 547px;
+    background-color: #D9D9D9;
+}
+
+.catalog_area-left ul {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.button_option {
+    font-weight: 600;
+    font-size: 23.46px;
+    line-height: 30.05px;
+    color: #000000;
+    height: 116.09px;
+    height: 31px;
+    background-color: #ffffff;
+}
+
+.catalog_area-right {
+    padding-top: 39px;
+    width: 253px;
+    height: 207px;
+}
+
+.catalog_area-right ul {
+    font-weight: 600;
+    font-size: 23.46px;
+    line-height: 57px;
+}
+
+.catalog_area-right li {
+    list-style-type: disc;
 }
