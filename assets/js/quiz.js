@@ -2,6 +2,7 @@ const progressBar = document.getElementById("progress")
 let prev = document.querySelector(".button-prev")
 let next = document.querySelector(".button-next")
 const circles = document.querySelectorAll(".progress_circle")
+const choose = document.querySelectorAll(".variants_item")
 let currentActive = 1
 
 next.addEventListener("click", () => {
@@ -55,3 +56,4 @@ next.addEventListener("click", () => {
 
     number.innerHTML = Number(number.innerHTML) + 1;
 });
+
