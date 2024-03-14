@@ -53,10 +53,15 @@ body {
     font-family: "Vela Sans", sans-serif;
 }
 
+hr {
+    height: 1px;
+    color: #E8E8E8;
+}
+
 .button {
+    cursor: pointer;
     border: none;
     color: #fff;
-    font-family: "Vela Sans", sans-serif;
 }
 
 .button:active {
@@ -88,30 +93,9 @@ body {
     display: flex;
     height: 82px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 52px;
     background-color: #F6F6F6;
-}
-
-.navigation::before {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    background-color: #F6F6F6;
-    width: 361.5px;
-    height: 82px;
-    left: -361.5px;
-    top: 0;
-}
-
-.navigation::after {
-    z-index: -1;
-    content: "";
-    position: absolute;
-    background-color: #F6F6F6;
-    width: 361.5px;
-    height: 82px;
-    top: 0;
-    right: -361.5px;
 }
 
 .navigation__button {
@@ -222,35 +206,20 @@ body {
     display: none;
 }
 
+.buttons_block {
+    z-index: 2;
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    top: 286px;
+}
+
 .additional_buttons {
     position: relative;
     height: 139px;
     background-color: #FFF;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #E8E8E8;
-}
-
-.additional_buttons::before {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    right: -370px;
-    content: "";
-    height: 1px;
-    width: 370px;
-    background-color: #E8E8E8;
-}
-
-.additional_buttons::after {
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
-    left: -370px;
-    content: "";
-    height: 1px;
-    width: 370px;
-    background-color: #E8E8E8;
 }
 
 .material-symbols-outlined {
@@ -514,19 +483,22 @@ body {
     position: relative;
 }
 
+.banner_buttons {
+    position: absolute;
+}
+
 .banner_buttons button {
     border: none;
     display: flex;
-    position: absolute;
     width: 96.65px;
     height: 96.65px;
     border-radius: 50%;
-    right: 16px;
+
     align-items: center;
     justify-content: center;
 }
 
-.button_arrow-up {
+.button_up {
     top: 1px;
 }
 
@@ -551,6 +523,8 @@ body {
 }
 
 .quiz_bottom {
+    display: flex;
+    gap: 25.17px;
     position: relative;
 }
 
@@ -586,10 +560,14 @@ body {
 }
 
 .quiz_variants {
-    display: flex;
+    display: none;
     gap: 17.07px;
     justify-content: center;
     padding-top: 48.75px;
+}
+
+.quiz_variants-active {
+    display: flex;
 }
 
 .variants_item {
@@ -670,9 +648,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 0;
-    right: 15px;
 }
 
 .additional_card-info {
@@ -1358,6 +1333,7 @@ body {
 }
 
 .tabs__tab {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -1572,7 +1548,8 @@ body {
     padding-top: 56.38px;
     background-color: #F6F6F6;
     display: flex;
-    flex-direction: column;
+    gap: 48px;
+    align-items: center;
 }
 
 .form_block-title {
@@ -2289,7 +2266,6 @@ body {
 
 .contacts {
     padding-top: 74.72px;
-    border-bottom: 1px solid #000000;
     padding-bottom: 43.61px;
 }
 
