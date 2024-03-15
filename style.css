@@ -480,20 +480,22 @@ hr {
 
 .banner_img {
     padding-left: 102.69px;
-    position: relative;
+
 }
 
-.banner_buttons {
+.buttons_block-buttons {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.banner_buttons button {
+.buttons_block-buttons button {
     border: none;
     display: flex;
     width: 96.65px;
     height: 96.65px;
     border-radius: 50%;
-
     align-items: center;
     justify-content: center;
 }
@@ -509,6 +511,12 @@ hr {
 
 .button_basket-small {
     top: 235px;
+}
+
+.button_basket-small svg {
+    position: absolute;
+    left: 47px;
+    top: 260px;
 }
 
 .quiz {
@@ -985,6 +993,7 @@ hr {
 }
 
 .button-addToCart {
+    z-index: 2;
     width: 52.35px;
     height: 52.35px;
     background-color: #ffffff;
@@ -2637,4 +2646,126 @@ hr {
 
 .catalog_area-right li {
     list-style-type: disc;
+}
+
+.cart_modal {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.cart_modal-area {
+    border-radius: 18px;
+    z-index: 3;
+    max-width: 944px;
+    margin: 132px auto 0;
+    background-color: #ffffff;
+}
+
+.cart_modal-content {
+    padding-top: 58px;
+    padding-bottom: 57px;
+    padding-left: 81px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart_modal-title {
+    font-weight: 40;
+    font-size: 40px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
+.cart_modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding-top: 52px;
+}
+
+.cart_modal-text {
+    padding-top: 45px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 62.67px;
+}
+
+.cart_modal-additional {
+    padding-top: 25px;
+    font-weight: 500;
+    font-size: 21.07px;
+    line-height: 29.5px;
+    color: #8B8B8B;
+}
+
+.cart_modal-input {
+    padding-top: 46px;
+    display: flex;
+    gap: 15px;
+}
+
+.cart_modal-input input {
+    width: 353px;
+    height: 60px;
+    border-radius: 51px;
+    background-color: #F3F3F3;
+    font-weight: 600;
+    font-size: 22.46px;
+    line-height: 56.31px;
+    padding-left: 27px;
+
+}
+
+.cart_modal-input button {
+    width: 213px;
+    height: 60px;
+    border-radius: 51px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 56.31px;
+}
+
+.modal_item {
+    display: flex;
+    gap: 28px;
+}
+
+.modal_item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_item-img {
+    background-color: #F3F3F3;
+    width: 150px;
+    height: 150px;
+}
+
+.modal_item-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 62.67px;
+    letter-spacing: -1px;
+}
+
+.button_delete {
+    font-weight: 600;
+    font-size: 21.07px;
+    line-height: 29.5px;
+    color: #353535;
+    background-color: #ffffff;
+    border: none;
+    text-decoration: underline;
+}
+
+.cart_modal-empty {
+    padding-top: 52px;
+    font-weight: 500;
+    font-size: 30px;
 }
