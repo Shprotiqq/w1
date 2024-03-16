@@ -25,5 +25,3 @@ btnCatalogToggle.addEventListener('click', () => {
 
 
 
-
-

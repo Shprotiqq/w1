@@ -1,15 +1,15 @@
-const cartToggleBtn = document.querySelector('.button_basket-small');
-const cartModal = document.querySelector('.cart_modal');
-const cartArea = document.querySelector('.cart_modal-area');
-
-cartToggleBtn.addEventListener('click', e => {
-    if (cartModal.style.display === '' || cartModal.style.display === 'none') {
-        cartModal.style.display = 'block';
-    }
+$('.button_basket-small').click(function () {
+    $('.cart_modal').fadeIn();
 });
+$('.button_basket').click(function (){
+    $('.cart_modal').fadeIn();
+})
 
-cartModal.addEventListener('click', e => {
-    if (!(e.currentTarget.dataset('data-cartContent'))) {
-        cartModal.style.display = 'none'
-    }
+$('.cart_modal-overlay').click(function () {
+    $('.cart_modal').fadeOut();
 });
+$('.button_submit').click(function () {
+    $('.cart_modal').fadeOut();
+})
+
+

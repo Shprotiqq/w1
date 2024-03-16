@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
@@ -237,7 +241,7 @@
         </div>
         <div class="additional_features">
             <div class="search">
-                <button class="button button_gray button_search">
+                <div class="search-icon">
                     <svg class="search_icon" width="28" height="28" viewBox="0 0 28 28" fill="currentColor"
                          xmlns="http://www.w3.org/2000/svg">
                         <circle fill-rule="nonzero" clip-rule="evenodd"
@@ -246,10 +250,11 @@
                               d="M23.334 23.3333L19.834 19.8333" stroke="#353535" stroke-width="2.33333"
                               stroke-linecap="round"/>
                     </svg>
-                </button>
-                <span>
-                            Поиск
-                        </span>
+                    <span>
+                    Поиск
+                </span>
+                </div>
+
             </div>
             <div class="compare">
                 <button class="button button_gray button_compare">
@@ -308,26 +313,20 @@
             </a>
             <button class="button button_gray button_basket-small">
                 <img src="img/bag_icon.svg" alt="">
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="10.687" cy="10.3505" r="10.312" fill="#00CA81"/>
-                </svg>
+                <span class="cart_quantity">0</span>
             </button>
         </div>
     </div>
     <div class="cart_modal">
+        <div class="cart_modal-overlay"></div>
         <div class="cart_modal-area">
             <div class="cart_modal-content" data-cartContent>
                 <div class="cart_modal-title">
                     Быстрое оформление заказа
                 </div>
-                <div class="cart_modal-empty">
-                Корзина пуста
-                </div>
-                <div class="cart_modal-list">
-
-                </div>
+                <div class="cart_modal-list cart_list" data-simplebar></div>
                 <div class="cart_modal-text">
-                    Мы позвоим, и уточним детали заказа
+                    Мы позвоним, и уточним детали заказа
                 </div>
                 <div class="cart_modal-input">
                     <label for="cart_phone"></label>
@@ -1012,7 +1011,7 @@
                     </div>
                     <div class="card-info">
                         <span class="card-prefix">Префикс названия</span>
-                        <span class="card-name">Товар 1</span>
+                        <div class="card-name">Товар 1</div>
                     </div>
                     <div class="catalog_card-chars catalog-chars">
                         <ul class="catalog_chars-list">
@@ -1763,21 +1762,26 @@
         <div class="catalog_additional container">
             <span class="catalog_additional-title">Сопутствующие товары</span>
             <div class="catalog_additional-cards">
-                <div class="catalog__card">
+                <div data-id="1" class="catalog__card">
                     <div class="card-top">
-                        <svg class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                            <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
-                                  stroke="#707070" stroke-width="2.11345"/>
-                        </svg>
-                        <svg class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
-                                  fill="#707070"/>
-                            <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                        </svg>
+                        <button data-fav class="button button_fav">
+                            <svg data-fav class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                                <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
+                                      stroke="#707070" stroke-width="2.11345"/>
+                            </svg>
+                        </button>
+                        <button data-comp class="button button_comp">
+                            <svg data-comp class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
+                                      fill="#707070"/>
+                                <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                            </svg>
+                        </button>
                         <img class="card-img" src="img/catalog_card_img.png" alt="">
                     </div>
                     <div class="card-info">
@@ -1788,15 +1792,15 @@
                         <ul class="catalog_chars-list">
                             <li class="catalog_chars-item">
                                 Характеристика 1
-                                <div class="chars__item-count">33</div>
+                                <div class="chars__item-count chars_first">33</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 2
-                                <div class="chars__item-count">233</div>
+                                <div class="chars__item-count chars_second">233</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 3
-                                <div class="chars__item-count">13л</div>
+                                <div class="chars__item-count chars_third">13л</div>
                             </li>
                         </ul>
                     </div>
@@ -1806,8 +1810,8 @@
                             <div class="catalog_price-count">132 107 руб.</div>
                         </div>
                         <div class="catalog__card-button">
-                            <button class="button button_green button-buy">
-                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                            <button data-buy class="button button_green button-buy">
+                                <svg data-buy width="12" height="15" viewBox="0 0 12 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M4.4391 0.977783C3.32322 0.977783 2.41862 1.88238 2.41862 2.99827V2.99873C1.69221 3.0019 1.29383 3.02699 0.997079 3.22528C0.850002 3.32355 0.72372 3.44983 0.625446 3.59691C0.398438 3.93665 0.398438 4.4096 0.398438 5.3555V11.7537C0.398438 13.0236 0.398438 13.6586 0.792961 14.0531C1.18749 14.4477 1.82246 14.4477 3.09242 14.4477H8.48037C9.75032 14.4477 10.3853 14.4477 10.7798 14.0531C11.1743 13.6586 11.1743 13.0236 11.1743 11.7537V5.3555C11.1743 4.4096 11.1743 3.93665 10.9473 3.59691C10.8491 3.44983 10.7228 3.32355 10.5757 3.22528C10.2789 3.02694 9.88036 3.00189 9.15356 2.99872V2.99827C9.15356 1.88238 8.24896 0.977783 7.13308 0.977783H4.4391ZM4.43973 2.99826C4.43973 2.6263 4.74126 2.32476 5.11322 2.32476H6.46021C6.83217 2.32476 7.1337 2.6263 7.1337 2.99826C7.1337 3.37022 6.83217 3.67175 6.46021 3.67175H5.11322C4.74126 3.67175 4.43973 3.37022 4.43973 2.99826ZM3.76602 7.03923C3.39406 7.03923 3.09253 7.34077 3.09253 7.71273C3.09253 8.08469 3.39406 8.38622 3.76602 8.38622H7.80699C8.17895 8.38622 8.48048 8.08469 8.48048 7.71273C8.48048 7.34077 8.17895 7.03923 7.80699 7.03923H3.76602ZM3.76602 9.73321C3.39406 9.73321 3.09253 10.0347 3.09253 10.4067C3.09253 10.7787 3.39406 11.0802 3.76602 11.0802H6.46C6.83196 11.0802 7.1335 10.7787 7.1335 10.4067C7.1335 10.0347 6.83196 9.73321 6.46 9.73321H3.76602Z"
@@ -1815,8 +1819,8 @@
                                 </svg>
                                 Купить
                             </button>
-                            <button class="button button-addToCart">
-                                <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                            <button data-cart class="button button-addToCart">
+                                <svg data-cart width="53" height="53" viewBox="0 0 53 53" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.6602 17.6995L17.6602 15.534C17.6602 10.7503 21.5381 6.87235 26.3218 6.87235V6.87235C31.1056 6.87235 34.9835 10.7503 34.9835 15.534L34.9835 17.6995"
                                           stroke="#353535" stroke-width="4.33085" stroke-linecap="round"/>
@@ -1828,21 +1832,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="catalog__card">
+                <div data-id="1" class="catalog__card">
                     <div class="card-top">
-                        <svg class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                            <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
-                                  stroke="#707070" stroke-width="2.11345"/>
-                        </svg>
-                        <svg class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
-                                  fill="#707070"/>
-                            <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                        </svg>
+                        <button data-fav class="button button_fav">
+                            <svg data-fav class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                                <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
+                                      stroke="#707070" stroke-width="2.11345"/>
+                            </svg>
+                        </button>
+                        <button data-comp class="button button_comp">
+                            <svg data-comp class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
+                                      fill="#707070"/>
+                                <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                            </svg>
+                        </button>
                         <img class="card-img" src="img/catalog_card_img.png" alt="">
                     </div>
                     <div class="card-info">
@@ -1853,15 +1862,15 @@
                         <ul class="catalog_chars-list">
                             <li class="catalog_chars-item">
                                 Характеристика 1
-                                <div class="chars__item-count">33</div>
+                                <div class="chars__item-count chars_first">33</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 2
-                                <div class="chars__item-count">233</div>
+                                <div class="chars__item-count chars_second">233</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 3
-                                <div class="chars__item-count">13л</div>
+                                <div class="chars__item-count chars_third">13л</div>
                             </li>
                         </ul>
                     </div>
@@ -1871,8 +1880,8 @@
                             <div class="catalog_price-count">132 107 руб.</div>
                         </div>
                         <div class="catalog__card-button">
-                            <button class="button button_green button-buy">
-                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                            <button data-buy class="button button_green button-buy">
+                                <svg data-buy width="12" height="15" viewBox="0 0 12 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M4.4391 0.977783C3.32322 0.977783 2.41862 1.88238 2.41862 2.99827V2.99873C1.69221 3.0019 1.29383 3.02699 0.997079 3.22528C0.850002 3.32355 0.72372 3.44983 0.625446 3.59691C0.398438 3.93665 0.398438 4.4096 0.398438 5.3555V11.7537C0.398438 13.0236 0.398438 13.6586 0.792961 14.0531C1.18749 14.4477 1.82246 14.4477 3.09242 14.4477H8.48037C9.75032 14.4477 10.3853 14.4477 10.7798 14.0531C11.1743 13.6586 11.1743 13.0236 11.1743 11.7537V5.3555C11.1743 4.4096 11.1743 3.93665 10.9473 3.59691C10.8491 3.44983 10.7228 3.32355 10.5757 3.22528C10.2789 3.02694 9.88036 3.00189 9.15356 2.99872V2.99827C9.15356 1.88238 8.24896 0.977783 7.13308 0.977783H4.4391ZM4.43973 2.99826C4.43973 2.6263 4.74126 2.32476 5.11322 2.32476H6.46021C6.83217 2.32476 7.1337 2.6263 7.1337 2.99826C7.1337 3.37022 6.83217 3.67175 6.46021 3.67175H5.11322C4.74126 3.67175 4.43973 3.37022 4.43973 2.99826ZM3.76602 7.03923C3.39406 7.03923 3.09253 7.34077 3.09253 7.71273C3.09253 8.08469 3.39406 8.38622 3.76602 8.38622H7.80699C8.17895 8.38622 8.48048 8.08469 8.48048 7.71273C8.48048 7.34077 8.17895 7.03923 7.80699 7.03923H3.76602ZM3.76602 9.73321C3.39406 9.73321 3.09253 10.0347 3.09253 10.4067C3.09253 10.7787 3.39406 11.0802 3.76602 11.0802H6.46C6.83196 11.0802 7.1335 10.7787 7.1335 10.4067C7.1335 10.0347 6.83196 9.73321 6.46 9.73321H3.76602Z"
@@ -1880,8 +1889,8 @@
                                 </svg>
                                 Купить
                             </button>
-                            <button class="button button-addToCart">
-                                <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                            <button data-cart class="button button-addToCart">
+                                <svg data-cart width="53" height="53" viewBox="0 0 53 53" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.6602 17.6995L17.6602 15.534C17.6602 10.7503 21.5381 6.87235 26.3218 6.87235V6.87235C31.1056 6.87235 34.9835 10.7503 34.9835 15.534L34.9835 17.6995"
                                           stroke="#353535" stroke-width="4.33085" stroke-linecap="round"/>
@@ -1893,21 +1902,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="catalog__card">
+                <div data-id="1" class="catalog__card">
                     <div class="card-top">
-                        <svg class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                            <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
-                                  stroke="#707070" stroke-width="2.11345"/>
-                        </svg>
-                        <svg class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
-                                  fill="#707070"/>
-                            <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                        </svg>
+                        <button data-fav class="button button_fav">
+                            <svg data-fav class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                                <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
+                                      stroke="#707070" stroke-width="2.11345"/>
+                            </svg>
+                        </button>
+                        <button data-comp class="button button_comp">
+                            <svg data-comp class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
+                                      fill="#707070"/>
+                                <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                            </svg>
+                        </button>
                         <img class="card-img" src="img/catalog_card_img.png" alt="">
                     </div>
                     <div class="card-info">
@@ -1918,15 +1932,15 @@
                         <ul class="catalog_chars-list">
                             <li class="catalog_chars-item">
                                 Характеристика 1
-                                <div class="chars__item-count">33</div>
+                                <div class="chars__item-count chars_first">33</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 2
-                                <div class="chars__item-count">233</div>
+                                <div class="chars__item-count chars_second">233</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 3
-                                <div class="chars__item-count">13л</div>
+                                <div class="chars__item-count chars_third">13л</div>
                             </li>
                         </ul>
                     </div>
@@ -1936,8 +1950,8 @@
                             <div class="catalog_price-count">132 107 руб.</div>
                         </div>
                         <div class="catalog__card-button">
-                            <button class="button button_green button-buy">
-                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                            <button data-buy class="button button_green button-buy">
+                                <svg data-buy width="12" height="15" viewBox="0 0 12 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M4.4391 0.977783C3.32322 0.977783 2.41862 1.88238 2.41862 2.99827V2.99873C1.69221 3.0019 1.29383 3.02699 0.997079 3.22528C0.850002 3.32355 0.72372 3.44983 0.625446 3.59691C0.398438 3.93665 0.398438 4.4096 0.398438 5.3555V11.7537C0.398438 13.0236 0.398438 13.6586 0.792961 14.0531C1.18749 14.4477 1.82246 14.4477 3.09242 14.4477H8.48037C9.75032 14.4477 10.3853 14.4477 10.7798 14.0531C11.1743 13.6586 11.1743 13.0236 11.1743 11.7537V5.3555C11.1743 4.4096 11.1743 3.93665 10.9473 3.59691C10.8491 3.44983 10.7228 3.32355 10.5757 3.22528C10.2789 3.02694 9.88036 3.00189 9.15356 2.99872V2.99827C9.15356 1.88238 8.24896 0.977783 7.13308 0.977783H4.4391ZM4.43973 2.99826C4.43973 2.6263 4.74126 2.32476 5.11322 2.32476H6.46021C6.83217 2.32476 7.1337 2.6263 7.1337 2.99826C7.1337 3.37022 6.83217 3.67175 6.46021 3.67175H5.11322C4.74126 3.67175 4.43973 3.37022 4.43973 2.99826ZM3.76602 7.03923C3.39406 7.03923 3.09253 7.34077 3.09253 7.71273C3.09253 8.08469 3.39406 8.38622 3.76602 8.38622H7.80699C8.17895 8.38622 8.48048 8.08469 8.48048 7.71273C8.48048 7.34077 8.17895 7.03923 7.80699 7.03923H3.76602ZM3.76602 9.73321C3.39406 9.73321 3.09253 10.0347 3.09253 10.4067C3.09253 10.7787 3.39406 11.0802 3.76602 11.0802H6.46C6.83196 11.0802 7.1335 10.7787 7.1335 10.4067C7.1335 10.0347 6.83196 9.73321 6.46 9.73321H3.76602Z"
@@ -1945,8 +1959,8 @@
                                 </svg>
                                 Купить
                             </button>
-                            <button class="button button-addToCart">
-                                <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                            <button data-cart class="button button-addToCart">
+                                <svg data-cart width="53" height="53" viewBox="0 0 53 53" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.6602 17.6995L17.6602 15.534C17.6602 10.7503 21.5381 6.87235 26.3218 6.87235V6.87235C31.1056 6.87235 34.9835 10.7503 34.9835 15.534L34.9835 17.6995"
                                           stroke="#353535" stroke-width="4.33085" stroke-linecap="round"/>
@@ -1958,21 +1972,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="catalog__card">
+                <div data-id="1" class="catalog__card">
                     <div class="card-top">
-                        <svg class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                            <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
-                                  stroke="#707070" stroke-width="2.11345"/>
-                        </svg>
-                        <svg class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
-                                  fill="#707070"/>
-                            <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
-                        </svg>
+                        <button data-fav class="button button_fav">
+                            <svg data-fav class="card-heart_icon" width="42" height="42" viewBox="0 0 42 42" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21.0773" cy="20.7724" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                                <path d="M13.1308 22.8206L20.4778 29.7224L20.4778 29.7224C20.7309 29.9601 20.8574 30.079 21.0066 30.1083C21.0738 30.1214 21.1429 30.1214 21.2101 30.1083C21.3593 30.079 21.4858 29.9601 21.7389 29.7224L29.0859 22.8206C31.1531 20.8788 31.4041 17.6832 29.6655 15.4424L29.3386 15.0211C27.2588 12.3404 23.0841 12.79 21.6226 15.852C21.4162 16.2845 20.8005 16.2845 20.5941 15.852C19.1327 12.79 14.9579 12.3404 12.8781 15.0211L12.5512 15.4424C10.8126 17.6832 11.0637 20.8788 13.1308 22.8206Z"
+                                      stroke="#707070" stroke-width="2.11345"/>
+                            </svg>
+                        </button>
+                        <button data-comp class="button button_comp">
+                            <svg data-comp class="card-graph_icon" width="42" height="42" viewBox="0 0 42 42"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M26.3906 17.567C26.3906 16.9834 25.9175 16.5103 25.3339 16.5103C24.7503 16.5103 24.2772 16.9834 24.2772 17.567V26.0208C24.2772 26.6044 24.7503 27.0775 25.3339 27.0775C25.9175 27.0775 26.3906 26.6044 26.3906 26.0208V17.567ZM16.879 18.6236C17.4626 18.6236 17.9357 19.0967 17.9357 19.6803L17.9357 26.0207C17.9357 26.6043 17.4626 27.0774 16.879 27.0774C16.2954 27.0774 15.8223 26.6043 15.8223 26.0207L15.8223 19.6803C15.8223 19.0967 16.2954 18.6236 16.879 18.6236ZM21.1065 20.7372C21.6901 20.7372 22.1632 21.2103 22.1632 21.7939V26.0209C22.1632 26.6045 21.6901 27.0776 21.1065 27.0776C20.5228 27.0776 20.0497 26.6045 20.0497 26.0209V21.7939C20.0497 21.2103 20.5228 20.7372 21.1065 20.7372Z"
+                                      fill="#707070"/>
+                                <circle cx="21.0773" cy="20.7055" r="19.9499" stroke="#707070" stroke-width="1.37586"/>
+                            </svg>
+                        </button>
                         <img class="card-img" src="img/catalog_card_img.png" alt="">
                     </div>
                     <div class="card-info">
@@ -1983,15 +2002,15 @@
                         <ul class="catalog_chars-list">
                             <li class="catalog_chars-item">
                                 Характеристика 1
-                                <div class="chars__item-count">33</div>
+                                <div class="chars__item-count chars_first">33</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 2
-                                <div class="chars__item-count">233</div>
+                                <div class="chars__item-count chars_second">233</div>
                             </li>
                             <li class="catalog_chars-item">
                                 Характеристика 3
-                                <div class="chars__item-count">13л</div>
+                                <div class="chars__item-count chars_third">13л</div>
                             </li>
                         </ul>
                     </div>
@@ -2001,8 +2020,8 @@
                             <div class="catalog_price-count">132 107 руб.</div>
                         </div>
                         <div class="catalog__card-button">
-                            <button class="button button_green button-buy">
-                                <svg width="12" height="15" viewBox="0 0 12 15" fill="none"
+                            <button data-buy class="button button_green button-buy">
+                                <svg data-buy width="12" height="15" viewBox="0 0 12 15" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M4.4391 0.977783C3.32322 0.977783 2.41862 1.88238 2.41862 2.99827V2.99873C1.69221 3.0019 1.29383 3.02699 0.997079 3.22528C0.850002 3.32355 0.72372 3.44983 0.625446 3.59691C0.398438 3.93665 0.398438 4.4096 0.398438 5.3555V11.7537C0.398438 13.0236 0.398438 13.6586 0.792961 14.0531C1.18749 14.4477 1.82246 14.4477 3.09242 14.4477H8.48037C9.75032 14.4477 10.3853 14.4477 10.7798 14.0531C11.1743 13.6586 11.1743 13.0236 11.1743 11.7537V5.3555C11.1743 4.4096 11.1743 3.93665 10.9473 3.59691C10.8491 3.44983 10.7228 3.32355 10.5757 3.22528C10.2789 3.02694 9.88036 3.00189 9.15356 2.99872V2.99827C9.15356 1.88238 8.24896 0.977783 7.13308 0.977783H4.4391ZM4.43973 2.99826C4.43973 2.6263 4.74126 2.32476 5.11322 2.32476H6.46021C6.83217 2.32476 7.1337 2.6263 7.1337 2.99826C7.1337 3.37022 6.83217 3.67175 6.46021 3.67175H5.11322C4.74126 3.67175 4.43973 3.37022 4.43973 2.99826ZM3.76602 7.03923C3.39406 7.03923 3.09253 7.34077 3.09253 7.71273C3.09253 8.08469 3.39406 8.38622 3.76602 8.38622H7.80699C8.17895 8.38622 8.48048 8.08469 8.48048 7.71273C8.48048 7.34077 8.17895 7.03923 7.80699 7.03923H3.76602ZM3.76602 9.73321C3.39406 9.73321 3.09253 10.0347 3.09253 10.4067C3.09253 10.7787 3.39406 11.0802 3.76602 11.0802H6.46C6.83196 11.0802 7.1335 10.7787 7.1335 10.4067C7.1335 10.0347 6.83196 9.73321 6.46 9.73321H3.76602Z"
@@ -2010,8 +2029,8 @@
                                 </svg>
                                 Купить
                             </button>
-                            <button class="button button-addToCart">
-                                <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                            <button data-cart class="button button-addToCart">
+                                <svg data-cart width="53" height="53" viewBox="0 0 53 53" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.6602 17.6995L17.6602 15.534C17.6602 10.7503 21.5381 6.87235 26.3218 6.87235V6.87235C31.1056 6.87235 34.9835 10.7503 34.9835 15.534L34.9835 17.6995"
                                           stroke="#353535" stroke-width="4.33085" stroke-linecap="round"/>
@@ -4525,7 +4544,7 @@
                     </div>
                     <div class="contacts_vacancies-button">
                         <button class="button button_green button_atf">
-                            Добавить сайт в избранное
+                            <a href="" rel="sidebar" onclick="addBookmark()">Добавить сайт в избранное</a>
                         </button>
                     </div>
                 </div>
@@ -4552,7 +4571,7 @@
         </div>
     </div>
 </footer>
-<script src="assets/js/cartToggle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="assets/js/btn_block.js"></script>
 <script src="/assets/js/listToggle.js"></script>
 <script src="/assets/js/quiz.js"></script>
@@ -4562,5 +4581,30 @@
 <script src="assets/js/cart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="assets/js/jquery-3.7.1.js"></script>
+<script src="assets/js/cartToggle.js"></script>
+<script>
+    function addBookmark () {
+        if (document.HTMLAllCollection) window.external.addFavorite('', 'Название сайта')
+    }
+</script>
+<noscript>
+    <style>
+        /**
+        * Reinstate scrolling for non-JS clients
+        */
+        .simplebar-content-wrapper {
+            scrollbar-width: auto;
+            -ms-overflow-style: auto;
+        }
+
+        .simplebar-content-wrapper::-webkit-scrollbar,
+        .simplebar-hide-scrollbar::-webkit-scrollbar {
+            display: initial;
+            width: initial;
+            height: initial;
+        }
+    </style>
+</noscript>
 </body>
 </html>
