@@ -12,4 +12,6 @@ $('.button_submit').click(function () {
     $('.cart_modal').fadeOut();
 })
 
-
+$('.button_fav').click(function () {
+    $('.button-fav').toggleClass('button_fav-active');
+});

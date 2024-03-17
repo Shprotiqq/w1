@@ -299,13 +299,47 @@ hr {
 }
 
 .search {
+    display: flex;
     transition: 0.3s;
 }
 
-.search.search-active {
-    width: 350px;
+.search a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.search:hover {
+    color: #00CA81;
+    transition: fill 0.3s;
+}
+
+.search:hover > .search-area {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search:hover > .search-button {
     background-color: #F6F6F6;
-    overflow: visible;
+    border-radius: 10px;
+}
+
+.search:hover > .compare {
+    visibility: hidden;
+}
+
+.search-area {
+    font-size: 15px;
+    line-height: 45px;
+    font-weight: 600;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #F6F6F6;
+    outline: none;
+    float: left;
+    padding: 0;
+    transition: 0.3s;
+    width: 0px;
 }
 
 .search svg {
@@ -314,10 +348,7 @@ hr {
     border-radius: 10.8px;
 }
 
-.search:hover {
-    color: #00CA81;
-    transition: fill 0.3s;
-}
+
 
 .search:hover svg {
     fill: #00CA81;
@@ -853,16 +884,33 @@ hr {
     padding-top: 85.58px;
 }
 
-.card-heart_icon {
+.card_buttons {
     position: absolute;
-    top: 20.13px;
-    right: 19.13px;
+    top: 20px;
+    right: 19px;
+    display: flex;
+    gap: 6.6px;
+    flex-direction: column;
+}
+
+.button_fav {
+    background-color: #F6F6F6;
+}
+
+.button_fav-active svg {
+    color: #00CA81;
+}
+
+.button_comp {
+    background-color: #F6F6F6;
+}
+
+.card-heart_icon {
+
 }
 
 .card-graph_icon {
-    position: absolute;
-    top: 68.07px;
-    right: 19.13px;
+
 }
 
 .catalog__title {
@@ -2329,6 +2377,7 @@ hr {
 }
 
 .contacts_top {
+    position: relative;
     display: flex;
     padding-top: 45.72px;
     flex-wrap: wrap;
@@ -2827,4 +2876,32 @@ hr {
     padding-top: 52px;
     font-weight: 500;
     font-size: 30px;
+}
+
+.call_form-bottom {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    position: absolute;
+    top: 55px;
+    right: 240px;
+    background-color: #ffffff;
+    width: 694.91px;
+    height: 252px;
+    border-radius: 11.38px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button_phone-bottom {
+    width: 172.67px;
+    height: 45.1px;
+    border-radius: 38.1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14.94px;
+    line-height: 42.06px;
 }
