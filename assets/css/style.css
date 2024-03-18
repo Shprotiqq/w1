@@ -544,7 +544,7 @@ hr {
 }
 
 .buttons_block-buttons button {
-    border: none;
+    border: 1px solid #000000;
     display: flex;
     width: 96.65px;
     height: 96.65px;
@@ -894,23 +894,39 @@ hr {
 }
 
 .button_fav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border: 1px solid #707070;
+    border-radius: 50%;
     background-color: #F6F6F6;
+    transition: 0.3s;
+
 }
 
-.button_fav-active svg {
+.button_fav:disabled {
+    background-color: #00CA81;
     color: #00CA81;
 }
 
 .button_comp {
     background-color: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 41px;
+    height: 41px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    background-color: #F6F6F6;
+    transition: 0.3s;
 }
 
-.card-heart_icon {
 
-}
-
-.card-graph_icon {
-
+.button_comp:disabled {
+    background-color: #00CA81;
 }
 
 .catalog__title {
@@ -2904,4 +2920,8 @@ hr {
     font-weight: 600;
     font-size: 14.94px;
     line-height: 42.06px;
+}
+
+.fav_list {
+    display: none;
 }

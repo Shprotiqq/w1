@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
             let id = parent.dataset.id;
             let imgSrc = parent.querySelector('.card-img').getAttribute('src');
             let title = parent.querySelector('.card-name').textContent;
-            console.log(self, parent, id, imgSrc, title)
 
             cartList.querySelector('.simplebar-content').insertAdjacentHTML("afterbegin", generateCartProduct(id, imgSrc, title))
             printQuantity()
