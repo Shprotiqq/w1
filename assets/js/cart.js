@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const productBtn = document.querySelectorAll('.button-addToCart')
     const cartQuantity = document.querySelector('.cart_quantity')
     const deleteBtn = document.querySelectorAll('.button_delete')
+    const productsList = [];
+    const data = localStorage.getItem('products')
+
+
 
     const updateStorage = () => {
-        let parent = cartList.querySelector('.simplebar-content');
-        let html = parent.innerHTML;
-        html = html.trim();
-        localStorage.setItem('products', html);
+        localStorage.setItem('products', JSON.stringify(productsList));
     }
 
     const generateCartProduct = (id, imgSrc, title) => {
@@ -31,24 +32,41 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     }
     const printQuantity = () => {
-        let number = cartList.querySelector('.simplebar-content').children.length;
+        let number = productsList.length;
         cartQuantity.textContent = number;
     }
+
+    // if (data !=='' && data !== null) {
+    //     const initialState = () => {
+    //         cartList.querySelector('.simplebar-content').innerHTML = JSON.parse(data);
+    //         printQuantity()
+    //     }
+    //
+    //     initialState()
+    // }
 
     const deleteProducts = (productParent) => {
         productParent.remove()
         printQuantity();
         updateStorage();
     }
+
     productBtn.forEach(el => {
         el.addEventListener('click', e => {
             let self = e.currentTarget;
-            let parent = self.closest('.catalog__card');
+            let parent = self.closest('.catalog__card-card');
             let id = parent.dataset.id;
             let imgSrc = parent.querySelector('.card-img').getAttribute('src');
             let title = parent.querySelector('.card-name').textContent;
 
-            cartList.querySelector('.simplebar-content').insertAdjacentHTML("afterbegin", generateCartProduct(id, imgSrc, title))
+            let currentCard = {
+                id: id,
+                imgSrc: imgSrc,
+                title: title
+            }
+
+            productsList.push(currentCard);
+
             printQuantity()
             updateStorage()
         })
@@ -60,14 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    const initialState = () => {
-        if (localStorage.getItem('products') !== null) {
-            cartList.querySelector('.simplebar-content').innerHTML = localStorage.getItem('products');
-            printQuantity()
-        }
-    }
 
-    initialState()
 })
 
 
