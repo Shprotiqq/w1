@@ -2633,8 +2633,20 @@ hr {
     gap: 31.07px;
 }
 
+.input_quiz {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 133px;
+
+}
+
 .input_quiz-active svg {
     fill: #00CA81;
+}
+
+.input_quiz-disabled {
+    pointer-events: none;
 }
 
 .call_form {
