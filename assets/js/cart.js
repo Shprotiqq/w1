@@ -3,14 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const productBtn = document.querySelectorAll('.button-addToCart')
     const cartQuantity = document.querySelector('.cart_quantity')
     const deleteBtn = document.querySelectorAll('.button_delete')
-    const productsList = [];
+    let productsList = [];
     const data = localStorage.getItem('products')
-
-
-
-    const updateStorage = () => {
-        localStorage.setItem('products', JSON.stringify(productsList));
-    }
+    if (data !== '' && data !== null) {
+        productsList = JSON.parse(data)
+        console.log(productsList)
+    };
 
     const generateCartProduct = (id, imgSrc, title) => {
         return `
@@ -30,26 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </li>
     `
-    }
-    const printQuantity = () => {
-        let number = productsList.length;
-        cartQuantity.textContent = number;
+    };
+
+
+    const updateStorage = () => {
+        localStorage.setItem('products', JSON.stringify(productsList));
     }
 
-    // if (data !=='' && data !== null) {
-    //     const initialState = () => {
-    //         cartList.querySelector('.simplebar-content').innerHTML = JSON.parse(data);
-    //         printQuantity()
-    //     }
-    //
-    //     initialState()
-    // }
+    function printQuantity ()  {
+        let n = productsList.length;
+        cartQuantity.textContent = n;
+    };
+
+    window.addEventListener("load", printQuantity)
 
     const deleteProducts = (productParent) => {
-        productParent.remove()
-        printQuantity();
-        updateStorage();
-    }
+        productParent.remove();
+
+    };
 
     productBtn.forEach(el => {
         el.addEventListener('click', e => {
@@ -69,16 +65,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
             printQuantity()
             updateStorage()
+            console.log(productsList)
         })
-    })
+    });
 
     cartList.addEventListener('click', e => {
         if (e.target.classList.contains('button_delete')) {
             deleteProducts(e.target.closest('.cart_list-item'))
+            let id = e.target.closest('.modal_item').dataset.id;
+            let index = productsList.findIndex(el => el.id === id);
+            productsList.splice(index, 1);
         }
-    })
 
+        updateStorage();
 
+        printQuantity()
+    });
+
+    $('.button_basket-small, .button_basket').click(function () {
+        $('.cart_modal').fadeIn();
+        $('.simplebar-content').empty();
+        for (const product of productsList) {
+            let id = product.id;
+            let imgSrc = product.imgSrc;
+            let title = product.title;
+            let productItem = generateCartProduct(id, imgSrc, title);
+            cartList.querySelector('.simplebar-content').insertAdjacentHTML("afterbegin", productItem)
+        }
+    });
+
+    $('.cart_modal-overlay, .button_submit').click(function () {
+        $('.cart_modal').fadeOut();
+    });
+
+    $('.button_fav').click(function () {
+        $('.button-fav').toggleClass('button_fav-active');
+    });
 })
 
 
