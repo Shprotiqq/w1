@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = localStorage.getItem('products')
     if (data !== '' && data !== null) {
         productsList = JSON.parse(data)
-        console.log(productsList)
-    };
+    }
 
     const generateCartProduct = (id, imgSrc, title) => {
         return `
