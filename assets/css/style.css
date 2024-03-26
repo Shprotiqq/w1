@@ -1,3 +1,5 @@
+@import "media.css";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +58,7 @@ hr {
     height: 1px;
     color: #E8E8E8;
 }
+
 
 .button {
     cursor: pointer;
@@ -144,10 +147,11 @@ hr {
 }
 
 .navigation__list {
-    width: 762px;
+    width: auto;
     height: 22px;
     display: flex;
     justify-content: space-between;
+    gap: 19.6px;
 }
 
 .navigation__item {
@@ -166,6 +170,7 @@ hr {
 
 .navigation__contacts {
     display: flex;
+    gap: 13px;
 }
 
 .button_call {
@@ -195,7 +200,6 @@ hr {
     flex-wrap: wrap;
     align-items: center;
     text-decoration-thickness: 1px;
-    padding-left: 13px;
 }
 
 .number_hours {
@@ -212,19 +216,39 @@ hr {
 }
 
 .buttons_block {
-    z-index: 2;
+    z-index: 3;
     position: sticky;
     display: flex;
     justify-content: flex-end;
     top: 286px;
 }
 
+.catalog_block {
+    position: absolute;
+}
+
 .additional_buttons {
     position: relative;
+    width: auto;
     height: 139px;
     background-color: #FFF;
     display: flex;
+    gap: 80px;
     align-items: center;
+}
+
+.additional_buttons-left {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 49px;
+}
+
+.additional_buttons-right {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 81px;
 }
 
 .material-symbols-outlined {
@@ -236,6 +260,10 @@ hr {
 
 .material-symbols-outlined-transform {
     transform: rotate(180deg);
+}
+
+.company-logo_link {
+    text-decoration: none;
 }
 
 .company-logo {
@@ -271,15 +299,13 @@ hr {
     gap: 19px;
     align-items: center;
     letter-spacing: -1px;
-    width: 254px;
+    width: auto;
     height: 68px;
-    padding-left: 80px;
 }
 
 .catalog_button {
     width: 152px;
     height: 54px;
-    padding-left: 50px;
 }
 
 .button_catalog {
@@ -323,10 +349,6 @@ hr {
     border-radius: 10px;
 }
 
-.search:hover > .compare {
-    visibility: hidden;
-}
-
 .search-area {
     font-size: 15px;
     line-height: 45px;
@@ -340,6 +362,7 @@ hr {
     padding: 0;
     transition: 0.3s;
     width: 0px;
+    padding-left: 5px;
 }
 
 .search svg {
@@ -347,8 +370,6 @@ hr {
     padding: 9px;
     border-radius: 10.8px;
 }
-
-
 
 .search:hover svg {
     fill: #00CA81;
@@ -394,7 +415,7 @@ hr {
 }
 
 .acc {
-    padding-left: 81px;
+
 }
 
 .button_acc {
@@ -422,6 +443,7 @@ hr {
 .main_banner {
     display: flex;
     padding-top: 64px;
+    justify-content: space-between;
 }
 
 .banner_info {
@@ -448,6 +470,7 @@ hr {
 }
 
 .info_item {
+    background-color: #fff;
     gap: 12.8px;
     display: flex;
     align-items: center;
@@ -532,7 +555,6 @@ hr {
 }
 
 .banner_img {
-    padding-left: 102.69px;
 
 }
 
@@ -1138,7 +1160,7 @@ hr {
 
 .catalog_promotion {
     display: flex;
-
+    gap: 125px;
     justify-content: space-between;
     padding-top: 75.8px;
 }
@@ -1159,8 +1181,8 @@ hr {
 
 .promotion-desc {
     word-wrap: break-word;
-    width: 323.64px;
-    height: 117px;
+    width: auto;
+    height: auto;
     font-weight: 300;
     font-size: 25.17px;
     line-height: 38.76px;
@@ -1171,8 +1193,8 @@ hr {
     border: 2px solid #C5C5C5;
     border-radius: 18.12px;
     padding: 49.33px 35.23px 46.57px 34.23px;
-    width: 716.79px;
-    height: 384px;
+    width: auto;
+    height: auto;
     display: flex;
 }
 
@@ -1522,6 +1544,7 @@ hr {
 
 .cards_block {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 27.18px;
     padding-top: 50.77px;
@@ -1751,9 +1774,6 @@ hr {
 }
 
 .requirements_list {
-    position: absolute;
-    top: 243.64px;;
-    right: 148.5px;
     display: flex;
     flex-direction: column;
 }
@@ -1836,7 +1856,7 @@ hr {
 }
 
 .general_desc-desc {
-    width: 602px;
+    width: auto;
     font-weight: 300;
     font-size: 20.51px;
     line-height: 30.2px;
@@ -1867,6 +1887,7 @@ hr {
     flex-wrap: wrap;
     gap: 35px 20.13px;
     padding-top: 50.89px;
+    justify-content: space-evenly;
 }
 
 .team_card {
@@ -2034,7 +2055,7 @@ hr {
 
 .delivery_desc {
     display: flex;
-    width: 560.75px;
+    width: auto;
     padding-top: 50.76px;
     font-weight: 300;
     font-size: 22.15px;
@@ -2103,7 +2124,7 @@ hr {
 }
 
 .guarantees_desc {
-    width: 620.14px;
+    width: auto;
     font-weight: 300;
     font-size: 20.13px;
     line-height: 30.2px;
@@ -2139,7 +2160,7 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 30.24px;
-    width: 620.14px;
+    width: auto;
     font-weight: 300;
     font-size: 20.13px;
     line-height: 30.2px;
@@ -2158,10 +2179,11 @@ hr {
 
 .discounts_block {
     padding-top: 50.76px;
-    width: 1163.73px;
-    height: 521.5px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .product_rating {
@@ -2177,7 +2199,7 @@ hr {
 
 .rating_desc {
     padding-top: 50.76px;
-    width: 708.73px;
+    width: auto;
     font-weight: 300;
     font-size: 22.15px;
     line-height: 30.2px;
@@ -2282,7 +2304,7 @@ hr {
 }
 
 .description_text-area {
-    width: 979.54px;
+    width: auto;
     font-weight: 500;
     font-size: 20.13px;
     line-height: 30.2px;
@@ -2374,7 +2396,7 @@ hr {
 
 .faq-text {
     padding-top: 30.21px;
-    width: 979.54px;
+    width: auto;
     font-weight: 500;
     font-size: 20.13px;
     line-height: 30.2px;
@@ -2494,6 +2516,7 @@ hr {
 
 .contacts_bottom {
     display: flex;
+    justify-content: space-between;
     gap: 68.59px;
     padding-top: 76.69px;
 }
@@ -2507,8 +2530,8 @@ hr {
 
 .contacts_requisites-list {
     padding-top: 30.62px;
-    width: 622.02px;
-    height: 309.76px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 9.06px;
@@ -2622,7 +2645,6 @@ hr {
 
 .promotion_action-area {
     display: flex;
-
     align-items: center;
     flex-wrap: wrap;
     gap: 31.07px;
@@ -2715,7 +2737,7 @@ hr {
     z-index: 3;
     position: absolute;
     left: -361.5px;
-    top: 95px;
+    top: 21px;
     width: 1920px;
     height: 556px;
     display: none;
@@ -2936,4 +2958,16 @@ hr {
 
 .fav_list {
     display: none;
+}
+
+.header_burger {
+    display: none;
+}
+
+.navigation__menu-active {
+    display: flex;
+}
+
+.catalog_area-left-active {
+    display: block;
 }

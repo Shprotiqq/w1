@@ -83,3 +83,8 @@ for (const compItem of compStorage) {
     let id = compItem.id;
     document.querySelector(`.catalog__card-card[data-id="${id}"]`).querySelector('.button_comp').disabled = true;
 }
+
+$('.header_burger').click(function (event) {
+    $('.navigation__menu').toggleClass('navigation__menu-active');
+    $('.catalog_area-left').toggleClass('catalog_area-left-active');
+})

@@ -3,6 +3,7 @@ const subList = document.querySelector('.navigation__sublist')
 const arrow = document.querySelector('.material-symbols-outlined')
 const btnCatalogToggle = document.querySelector('.button_catalog')
 const catalogArea = document.querySelector('.catalog_area')
+const catalogBlock = document.querySelector('.catalog_block')
 
 btnSublistToggle.addEventListener('click', () => {
     if (subList.style.display === '' || subList.style.display === 'none') {
