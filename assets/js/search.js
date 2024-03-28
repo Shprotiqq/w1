@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if (window.width() > 832) {
+    if (matchMedia('(max-width: 832px)').matches) {
         $('.search').mouseover(function () {
             $('.compare').hide();
             $('.favorites').hide();

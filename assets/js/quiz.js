@@ -9,19 +9,6 @@ var currentStep = slides[0];
 var currentSlide = 0;
 let currentActive = 1;
 
-variantBtn.forEach(el => {
-    el.addEventListener('click', e => {
-        let self = e.currentTarget;
-        let variant = self.value;
-        let parent = self.closest('.variants_item');
-        let currenntSlide = parent.closest('.quiz_variants ')
-        parent.classList.add('input_quiz-active')
-        currenntSlide.classList.add('input_quiz-disabled')
-        variants.push(variant)
-        localStorage.setItem('quiz_answers', variants)
-    })
-})
-
 const update = () => {
     let width = 0;
     circles.forEach((circle, index) => {
@@ -43,6 +30,33 @@ const update = () => {
         next.disabled = false;
     }
 };
+
+variantBtn.forEach(el => {
+    el.addEventListener('click', e => {
+        let self = e.currentTarget;
+        let variant = self.value;
+        let parent = self.closest('.variants_item');
+        let currentSlide = parent.closest('.quiz_variants ')
+        parent.classList.add('input_quiz-active')
+        currentSlide.classList.add('input_quiz-disabled')
+        variants.push(variant)
+        localStorage.setItem('quiz_answers', variants)
+
+    //     currentActive++;
+    //     if (currentActive > circles.length) {
+    //         currentActive = circles.length;
+    //     }
+    //     update();
+    //
+    //     const number = document.querySelector("#number");
+    //     number.innerHTML = Number(number.innerHTML) + 1;
+    //     currentSlide++;
+    //     let nextStep = slides[currentSlide];
+    //     currentStep.classList.remove('quiz_variants-active');
+    //     nextStep.classList.add('quiz_variants-active');
+    //     currentStep = nextStep;
+    })
+})
 prev.addEventListener("click", () => {
     currentActive--;
     if (currentActive < 1) {
