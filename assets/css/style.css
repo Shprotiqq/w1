@@ -97,6 +97,7 @@ hr {
 }
 
 .navigation {
+    width: 100%;
     position: relative;
     display: flex;
     height: 82px;
@@ -229,7 +230,7 @@ hr {
 
 .additional_buttons {
     position: relative;
-    width: auto;
+    width: 100%;
     height: 139px;
     background-color: #FFF;
     display: flex;
@@ -441,6 +442,7 @@ hr {
 }
 
 .main_banner {
+    width: 100%;
     display: flex;
     padding-top: 64px;
     justify-content: space-between;
@@ -616,6 +618,7 @@ hr {
 }
 
 .quiz {
+    width: 100%;
     padding-top: 86.13px;
 }
 
@@ -845,7 +848,6 @@ hr {
     width: 1162.77px;
     margin-top: 43.71px;
     margin-bottom: 74.5px;
-    max-width: 100%;
     overflow: hidden;
 }
 
@@ -903,6 +905,7 @@ hr {
 }
 
 .catalog {
+    width: 100%;
     padding-top: 85.58px;
 }
 
@@ -1133,6 +1136,7 @@ hr {
 }
 
 .catalog_additional {
+    width: 100%;
     padding-top: 75.66px;
 }
 
@@ -1203,6 +1207,7 @@ hr {
 }
 
 .portfolio {
+    width: 100%;
    padding-top: 75.51px;
 }
 
@@ -1258,6 +1263,8 @@ hr {
 }
 
 .price_list {
+
+    width: 100%;
   padding-top: 75.5px;
 }
 
@@ -1532,6 +1539,8 @@ hr {
 }
 
 .tariff_block {
+
+    width: 100%;
     padding-top: 75.5px;
 }
 
@@ -1793,6 +1802,7 @@ hr {
 }
 
 .company_about {
+    width: 100%;
     padding-top: 75.5px;
 }
 .about-title {
@@ -1918,6 +1928,7 @@ hr {
 }
 
 .reviews {
+    width: 100%;
     padding-top: 69.1px;
 }
 
@@ -2025,6 +2036,7 @@ hr {
 }
 
 .certificates {
+    width: 100%;
     padding-top: 75.51px;
 }
 
@@ -2043,6 +2055,7 @@ hr {
 }
 
 .delivery {
+    width: 100%;
     padding-top: 75.85px;
 }
 
@@ -2097,6 +2110,7 @@ hr {
 }
 
 .information {
+    width: 100%;
     padding-top: 75.51px;
 }
 
@@ -2293,6 +2307,7 @@ hr {
 }
 
 .description {
+    width: 100%;
     padding-top: 74.82px;
 }
 
@@ -2369,6 +2384,7 @@ hr {
 }
 
 .faq {
+    width: 100%;
     padding-top: 75.26px;
 }
 
@@ -2403,6 +2419,7 @@ hr {
 }
 
 .contacts {
+    width: 100%;
     padding-top: 74.72px;
     padding-bottom: 43.61px;
 }
@@ -2819,6 +2836,7 @@ hr {
     position: sticky;
     z-index: 3;
     max-width: 944px;
+    width: 100%;
     margin: 132px auto 0;
     background-color: #ffffff;
 }
