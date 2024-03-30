@@ -1,4 +1,7 @@
 @media (max-width: 1200px) {
+    .container {
+        margin: 0 10px;
+    }
     .navigation {
         gap: 0;
         justify-content: space-between;
@@ -66,7 +69,7 @@
     }
     .banner_img {
         position: absolute;
-        right: 0;
+        right: 10px;
     }
     .contacts_number {
         flex-direction: row;
@@ -285,6 +288,10 @@
     }
 }
 @media (max-width: 690px) {
+    .contacts_bottom {
+        flex-direction: column;
+        padding-top: 0;
+    }
     .contacts_map {
         display: none;
     }
@@ -376,9 +383,89 @@
     }
 }
 @media (max-width: 465px) {
+    .portfolio {
+        width: auto;
+    }
+    .form__phone-input input {
+        width: auto;
+    }
+    .form__name-input input {
+        width: auto;
+    }
+    .footer_block-left {
+        display: block;
+    }
+    .footer_right {
+        width: auto;
+        font-size: 15px;
+    }
+    .certificates-title {
+        font-size: 41px;
+    }
+    .contacts_number {
+        flex-wrap: wrap;
+    }
+    .discounts_block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .delivery_title {
+        font-size: 41px;
+    }
+    .general_img img {
+        width: 100%;
+        height: 100%;
+    }
+    .img__gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .payment_img {
+        width: auto;
+        height: auto;
+    }
+    .guarantees_img {
+        width: auto;
+        height: auto;
+    }
+    .delivery_action-btn_area {
+        flex-wrap: wrap;
+    }
     .promotion_action-area {
         justify-content: space-evenly;
-        flex-wrap: nowrap;
+    }
+    .form__title {
+        padding-left: 0;
+    }
+    .form__button {
+        display: flex;
+        justify-content: center;
+    }
+    .tariff_block-title {
+        font-size: 39px;
+    }
+    .card_option-content {
+        padding: 29.2px 0;
+    }
+    .adv_list__item {
+        width: auto;
+    }
+    .review_block-card {
+        width: auto;
+        height: auto;
+    }
+    .review_block-card-content {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .review_top {
+        padding-left: 0;
+    }
+    .review_bottom {
+        padding: 0;
     }
     .form_block-content {
         flex-direction: column;

@@ -42,19 +42,19 @@ variantBtn.forEach(el => {
         variants.push(variant)
         localStorage.setItem('quiz_answers', variants)
 
-    //     currentActive++;
-    //     if (currentActive > circles.length) {
-    //         currentActive = circles.length;
-    //     }
-    //     update();
-    //
-    //     const number = document.querySelector("#number");
-    //     number.innerHTML = Number(number.innerHTML) + 1;
-    //     currentSlide++;
-    //     let nextStep = slides[currentSlide];
-    //     currentStep.classList.remove('quiz_variants-active');
-    //     nextStep.classList.add('quiz_variants-active');
-    //     currentStep = nextStep;
+        currentActive++;
+        if (currentActive > circles.length) {
+            currentActive = circles.length;
+        }
+        update();
+
+        const number = document.querySelector("#number");
+        number.innerHTML = Number(number.innerHTML) + 1;
+        currentSlide++;
+        let nextStep = slides[currentSlide];
+        currentStep.classList.remove('quiz_variants-active');
+        nextStep.classList.add('quiz_variants-active');
+        currentStep = nextStep;
     })
 })
 prev.addEventListener("click", () => {
