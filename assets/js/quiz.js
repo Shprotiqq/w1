@@ -31,6 +31,22 @@ const update = () => {
     }
 };
 
+const nextSlide = () => {
+    currentActive++;
+    if (currentActive > circles.length) {
+        currentActive = circles.length;
+    }
+    update();
+
+    const number = document.querySelector("#number");
+    number.innerHTML = Number(number.innerHTML) + 1;
+    currentSlide++;
+    let nextStep = slides[currentSlide];
+    currentStep.classList.remove('quiz_variants-active');
+    nextStep.classList.add('quiz_variants-active');
+    currentStep = nextStep;
+}
+
 variantBtn.forEach(el => {
     el.addEventListener('click', e => {
         let self = e.currentTarget;
@@ -42,19 +58,13 @@ variantBtn.forEach(el => {
         variants.push(variant)
         localStorage.setItem('quiz_answers', variants)
 
-        currentActive++;
-        if (currentActive > circles.length) {
-            currentActive = circles.length;
+        if (!currentStep.classList.contains('quiz_variants__last-page')) {
+            setTimeout(() => {
+                nextSlide();
+            }, 300);
+        } else {
+            return;
         }
-        update();
-
-        const number = document.querySelector("#number");
-        number.innerHTML = Number(number.innerHTML) + 1;
-        currentSlide++;
-        let nextStep = slides[currentSlide];
-        currentStep.classList.remove('quiz_variants-active');
-        nextStep.classList.add('quiz_variants-active');
-        currentStep = nextStep;
     })
 })
 prev.addEventListener("click", () => {
@@ -77,19 +87,7 @@ prev.addEventListener("click", () => {
 });
 
 next.addEventListener("click", () => {
-    currentActive++;
-    if (currentActive > circles.length) {
-        currentActive = circles.length;
-    }
-    update();
-
-    const number = document.querySelector("#number");
-    number.innerHTML = Number(number.innerHTML) + 1;
-    currentSlide++;
-    let nextStep = slides[currentSlide];
-    currentStep.classList.remove('quiz_variants-active');
-    nextStep.classList.add('quiz_variants-active');
-    currentStep = nextStep;
+    nextSlide();
 });
 
 
