@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    $('.cart_modal-overlay, .button_submit').click(function () {
+    $('.cart_modal-overlay, .button_submit, .cart_modal-close').click(function () {
         $('.cart_modal').fadeOut();
     });
 

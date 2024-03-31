@@ -1,6 +1,46 @@
 @media (max-width: 1200px) {
     .container {
+        box-sizing: border-box;
         padding: 0 10px;
+    }
+    .quiz {
+        padding-top: 86px;
+    }
+    .catalog {
+        padding-top: 85px;
+    }
+    .catalog_additional {
+        padding-top: 75px;
+    }
+    .portfolio {
+        padding-top: 75px;
+    }
+    .price_list {
+        padding-top: 75px;
+    }
+    .tariff_block {
+        padding-top: 75px;
+    }
+    .reviews {
+        padding-top: 60px;
+    }
+    .certificates {
+        padding-top: 75px;
+    }
+    .delivery {
+        padding-top: 75px;
+    }
+    .information {
+        padding-top: 75px;
+    }
+    .description {
+        padding-top: 75px;
+    }
+    .faq {
+        padding-top: 75px;
+    }
+    .contacts {
+        padding-top: 75px;
     }
     .navigation {
         gap: 0;
@@ -195,6 +235,32 @@
     }
 }
 @media (max-width: 832px) {
+    .cart_modal-close {
+        display: block;
+    }
+    .cart_modal-area {
+        margin-top: 15px;
+    }
+    .cart_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .cart_modal-title {
+        font-size: 30px;
+    }
+    .cart_list {
+        max-height: 205px;
+    }
+    .cart_modal-text {
+        font-size: 25px;
+    }
+    .cart_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .cart_modal-input input {
+        width: auto;
+    }
     .form-bottom {
         gap: 45px;
     }
@@ -338,6 +404,16 @@
     }
 }
 @media (max-width: 590px) {
+    .quiz_buttons {
+        justify-content: center;
+    }
+    .quiz_bottom {
+        flex-direction: column;
+    }
+    .option_bottom-expand::after,
+    .option_bottom-expand::before {
+        display: none;
+    }
     .additional_features {
         gap: 5px;
     }
@@ -383,6 +459,54 @@
     }
 }
 @media (max-width: 465px) {
+    .search-area {
+        border-radius: 10px;
+    }
+    .form_block-input_name {
+        display: flex;
+        justify-content: center;
+    }
+    .form_block-input_phone {
+        display: flex;
+        justify-content: center;
+    }
+    .form_block-title {
+        display: flex;
+        justify-content: center;
+        font-size: 33px;
+    }
+    .additional_buttons {
+        max-width: 100%;
+    }
+    .about__name {
+        font-size: 26px;
+    }
+    .requirements_list-item {
+        display: flex;
+    }
+    .card_option__desc {
+        width: auto;
+        height: auto;
+        font-size: 17px;
+    }
+    .card_option {
+        width: auto;
+    }
+    .chars_list-item {
+        width: auto;
+        height: auto;
+    }
+    .list__top {
+        font-size: 12px;
+    }
+    .prices_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title {
+        font-size: 39px;
+    }
     .portfolio {
         width: auto;
     }
@@ -393,11 +517,11 @@
         width: auto;
     }
     .footer_block-left {
-        display: block;
+        flex-direction: column;
     }
     .footer_right {
         width: auto;
-        font-size: 15px;
+        font-size: 12px;
     }
     .certificates-title {
         font-size: 41px;
@@ -444,7 +568,7 @@
         justify-content: center;
     }
     .tariff_block-title {
-        font-size: 39px;
+        font-size: 35px;
     }
     .card_option-content {
         padding: 29.2px 0;
@@ -492,8 +616,14 @@
     }
 }
 @media (max-width: 400px) {
+    .catalog__title {
+        font-size: 33px;
+    }
+    .prices_title {
+        font-size: 35px;
+    }
     .catalog_additional-title {
-        font-size: 32px;
+        font-size: 27px;
     }
     .contacts_address-address {
         font-size: 20px;

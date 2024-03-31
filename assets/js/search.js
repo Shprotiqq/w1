@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    if (matchMedia('(max-width: 832px)').matches) {
+    if ($(window).width() >= 832) {
         $('.search').mouseover(function () {
             $('.compare').hide();
             $('.favorites').hide();
@@ -8,5 +8,8 @@ $(document).ready(function () {
             $('.compare').show();
             $('.favorites').show();
         })
+    }
+    if ($(window).width() <= 832) {
+        $('.navigation').addClass('container')
     }
 })
