@@ -1,4 +1,7 @@
 @media (max-width: 1200px) {
+    .slick-slide {
+        margin: 0 55px;
+    }
     .container {
         box-sizing: border-box;
         padding: 0 10px;
@@ -86,7 +89,6 @@
         display: flex;
         justify-content: center;
     }
-
     .promotion_action {
         padding: 0;
     }
@@ -234,7 +236,48 @@
         display: none;
     }
 }
+@media (max-width: 880px) {
+    .slick-slide {
+        margin: 0 40px;
+    }
+    .slick-slide {
+        opacity: 0.4;
+    }
+    .slick-center {
+        opacity: 1;
+    }
+    .slick-active {
+        opacity: 1;
+    }
+}
 @media (max-width: 832px) {
+    .favorite_modal-close {
+        display: block;
+    }
+    .favorite_modal-area {
+        margin-top: 15px;
+    }
+    .favorite_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .favorite_modal-title {
+        font-size: 30px;
+    }
+    .favorite_list {
+        max-height: 205px;
+    }
+    .favorite_modal-text {
+        font-size: 25px;
+    }
+    .favorite_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .favorite_modal-input input {
+        width: auto;
+    }
+
     .cart_modal-close {
         display: block;
     }
@@ -271,6 +314,12 @@
 }
 
 @media (max-width: 750px) {
+    .quiz_number {
+        justify-content: center;
+    }
+    .quiz_bottom {
+        flex-direction: column;
+    }
     .button_call {
         display: none;
     }
@@ -285,9 +334,6 @@
     }
     .search {
         max-width: 300px;
-    }
-    .additional_buttons {
-        justify-content: flex-start;
     }
     .promotion-title {
         font-size: 35px;
@@ -354,6 +400,9 @@
     }
 }
 @media (max-width: 690px) {
+    .banner_img {
+        display: none;
+    }
     .contacts_bottom {
         flex-direction: column;
         padding-top: 0;
@@ -404,6 +453,9 @@
     }
 }
 @media (max-width: 590px) {
+    .quiz_progress {
+        display: none;
+    }
     .quiz_buttons {
         justify-content: center;
     }
@@ -459,6 +511,10 @@
     }
 }
 @media (max-width: 465px) {
+    .info_title {
+        font-size: 49px;
+        line-height: 40px;
+    }
     .search-area {
         border-radius: 10px;
     }
@@ -608,14 +664,20 @@
         gap: 0;
         font-size: 15px;
     }
-    .compare {
+    .search span {
         display: none;
     }
-    .favorites {
+    .compare span {
+        display: none;
+    }
+    .favorites span {
         display: none;
     }
 }
 @media (max-width: 400px) {
+    .company_name {
+        display: none;
+    }
     .catalog__title {
         font-size: 33px;
     }
@@ -639,5 +701,13 @@
     }
     .form_block-content {
         padding-left: 0;
+    }
+    .slick-dots {
+        bottom: -50px;
+    }
+}
+@media (max-width: 360px) {
+    .review_top-rate {
+        display: none;
     }
 }

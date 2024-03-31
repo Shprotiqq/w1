@@ -1,15 +1,12 @@
-$(document).ready(function () {
-    if ($(window).width() >= 832) {
-        $('.search').mouseover(function () {
-            $('.compare').hide();
-            $('.favorites').hide();
-        });
-        $('.search').mouseout(function () {
-            $('.compare').show();
-            $('.favorites').show();
-        })
-    }
-    if ($(window).width() <= 832) {
-        $('.navigation').addClass('container')
-    }
-})
+$('.search-button').on('click', function (e) {
+    $('.search-area').toggleClass('search-area-active');
+    $('.compare, .favorites').toggle('slow');
+});
+
+// $(document).on('click', function (e) {
+//     if (document.querySelector('.search-area').classList.contains('search-area-active') && !e.target.classList.contains('search')) {
+//         $('.compare, .favorites').toggle('slow');
+//         document.querySelector('.search-area').classList.remove('search-area-active')
+//     }
+
+

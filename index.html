@@ -12,6 +12,8 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
     <title>Title</title>
 </head>
 <body>
@@ -354,6 +356,7 @@
         <div class="order_modal-overlay"></div>
         <div class="order_modal-area">
             <div class="order_modal-content">
+                <div class="order_modal-close"></div>
                 <div class="order_modal-title">
                     Быстрое оформление заказа
                 </div>
@@ -378,6 +381,7 @@
         <div class="favorite_modal-overlay"></div>
         <div class="favorite_modal-area">
             <div class="favorite_modal-content">
+                <div class="favorite_modal-close"></div>
                 <div class="favorite_modal-title">
                     Список ваших избранных товаров
                 </div>
@@ -399,29 +403,30 @@
         </div>
     </div>
     <div class="compare_modal">
-    <div class="compare_modal-overlay"></div>
-    <div class="compare_modal-area">
-        <div class="compare_modal-content">
-            <div class="compare_modal-title">
-                Список товаров для сравнения
-            </div>
-            <div class="compare_modal-list compare_list" data-simplebar></div>
-            <div class="compare_modal-text">
-                Мы позвоним, и уточним детали заказа
-            </div>
-            <div class="compare_modal-input">
-                <label for="compare_phone"></label>
-                <input id="compare_phone" type="text" placeholder="Ваш телефон">
-                <button type="submit" class="button button_green button_submit">
-                    Сделать заказ
-                </button>
-            </div>
-            <div class="compare_modal-additional">
-                Позвоним вам, чтобы уточнить детали. Это ни к чему вас не обязывает.
+        <div class="compare_modal-overlay"></div>
+        <div class="compare_modal-area">
+            <div class="compare_modal-content">
+                <div class="compare_modal-close"></div>
+                <div class="compare_modal-title">
+                    Список товаров для сравнения
+                </div>
+                <div class="compare_modal-list compare_list" data-simplebar></div>
+                <div class="compare_modal-text">
+                    Мы позвоним, и уточним детали заказа
+                </div>
+                <div class="compare_modal-input">
+                    <label for="compare_phone"></label>
+                    <input id="compare_phone" type="text" placeholder="Ваш телефон">
+                    <button type="submit" class="button button_green button_submit">
+                        Сделать заказ
+                    </button>
+                </div>
+                <div class="compare_modal-additional">
+                    Позвоним вам, чтобы уточнить детали. Это ни к чему вас не обязывает.
+                </div>
             </div>
         </div>
     </div>
-</div>
     <section>
         <div class="main_banner container">
             <div class="banner_info">
@@ -2327,32 +2332,38 @@
                 <div class="img__title title">Портфолио</div>
                 <div class="img__gallery">
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2022-08/29/WhatsApp%20Image%202022-08-19%20at%2009.14.05.jpeg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2022-08/29/WhatsApp%20Image%202022-08-19%20at%2009.14.05%20(1).jpeg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2023-07/19/IMG-20230627-WA0683.jpg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2023-07/19/IMG-20230627-WA0666.jpg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2022-10/10/WhatsApp Image 2022-10-02 at 13.43.04 (1).jpeg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
                     <div class="gallery-picture">
-                        <a href="img/portfolio_img.png" data-fancybox="clients-gallery">
+                        <a href="https://septik-pod-klyuch.pro/images/2023-07/19/IMG-20230627-WA0672.jpg"
+                           data-fancybox="clients-gallery">
                             <img loading="lazy" src="img/portfolio_img.png" alt="">
                         </a>
                     </div>
@@ -2567,305 +2578,176 @@
                                     Стоимость зависит от толщины
                                 </div>
                             </div>
-
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
                         </div>
                     </div>
-                </div>
-                <div class="tabs__tab tab_dropdown">
-                    <div class="tab__header">
-                        Малярно штукатурные
-                        <svg class="caret" width="21" height="11" viewBox="0 0 21 11" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.4607 10.2925L20.051 0.476897H0.870348L10.4607 10.2925Z" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="tab__list">
-                        <div class="list__top chars_list">
-                            <div class="chars_list-item list__top-name">
-                                Наименование
-                                <br>
-                                ремонтных работ
+                    <div class="tabs__tab tab_dropdown">
+                        <div class="tab__header">
+                            Малярно штукатурные
+                            <svg class="caret" width="21" height="11" viewBox="0 0 21 11" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.4607 10.2925L20.051 0.476897H0.870348L10.4607 10.2925Z" fill="black"/>
+                            </svg>
+                        </div>
+                        <div class="tab__list">
+                            <div class="list__top chars_list">
+                                <div class="chars_list-item list__top-name">
+                                    Наименование
+                                    <br>
+                                    ремонтных работ
+                                </div>
+                                <div class="chars_list-item list__top-number">
+                                    Ед. изм
+                                </div>
+                                <div class="chars_list-item list__top-price">
+                                    Цена за ед. (Руб)
+                                </div>
+                                <div class="chars_list-item list__top-info">
+                                    Дополнительная информация
+                                </div>
                             </div>
-                            <div class="chars_list-item list__top-number">
-                                Ед. изм
-                            </div>
-                            <div class="chars_list-item list__top-price">
-                                Цена за ед. (Руб)
-                            </div>
-                            <div class="chars_list-item list__top-info">
-                                Дополнительная информация
+                            <div class="list__bottom">
+                                <div class="list__bottom-options options">
+                                    <div class="options_item options-name">
+                                        Штукатурка стен цементная
+                                    </div>
+                                    <div class="options_item options-number">
+                                        М2
+                                    </div>
+                                    <div class="options_item options-price">
+                                        450
+                                    </div>
+                                    <div class="options_item options-info">
+                                        Стоимость зависит от толщины
+                                    </div>
+                                </div>
+                                <div class="list__bottom-options options">
+                                    <div class="options_item options-name">
+                                        Штукатурка стен цементная
+                                    </div>
+                                    <div class="options_item options-number">
+                                        М2
+                                    </div>
+                                    <div class="options_item options-price">
+                                        450
+                                    </div>
+                                    <div class="options_item options-info">
+                                        Стоимость зависит от толщины
+                                    </div>
+                                </div>
+                                <div class="list__bottom-options options">
+                                    <div class="options_item options-name">
+                                        Штукатурка стен цементная
+                                    </div>
+                                    <div class="options_item options-number">
+                                        М2
+                                    </div>
+                                    <div class="options_item options-price">
+                                        450
+                                    </div>
+                                    <div class="options_item options-info">
+                                        Стоимость зависит от толщины
+                                    </div>
+                                </div>
+                                <div class="list__bottom-options options">
+                                    <div class="options_item options-name">
+                                        Штукатурка стен цементная
+                                    </div>
+                                    <div class="options_item options-number">
+                                        М2
+                                    </div>
+                                    <div class="options_item options-price">
+                                        450
+                                    </div>
+                                    <div class="options_item options-info">
+                                        Стоимость зависит от толщины
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="list__bottom">
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
+                        <div class="tabs__tab tab_dropdown">
+                            <div class="tab__header">
+                                Малярно штукатурные
+                                <svg class="caret" width="21" height="11" viewBox="0 0 21 11" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.4607 10.2925L20.051 0.476897H0.870348L10.4607 10.2925Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <div class="tab__list">
+                                <div class="list__top chars_list">
+                                    <div class="chars_list-item list__top-name">
+                                        Наименование
+                                        <br>
+                                        ремонтных работ
+                                    </div>
+                                    <div class="chars_list-item list__top-number">
+                                        Ед. изм
+                                    </div>
+                                    <div class="chars_list-item list__top-price">
+                                        Цена за ед. (Руб)
+                                    </div>
+                                    <div class="chars_list-item list__top-info">
+                                        Дополнительная информация
+                                    </div>
                                 </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
+                                <div class="list__bottom">
+                                    <div class="list__bottom-options options">
+                                        <div class="options_item options-name">
+                                            Штукатурка стен цементная
+                                        </div>
+                                        <div class="options_item options-number">
+                                            М2
+                                        </div>
+                                        <div class="options_item options-price">
+                                            450
+                                        </div>
+                                        <div class="options_item options-info">
+                                            Стоимость зависит от толщины
+                                        </div>
+                                    </div>
+                                    <div class="list__bottom-options options">
+                                        <div class="options_item options-name">
+                                            Штукатурка стен цементная
+                                        </div>
+                                        <div class="options_item options-number">
+                                            М2
+                                        </div>
+                                        <div class="options_item options-price">
+                                            450
+                                        </div>
+                                        <div class="options_item options-info">
+                                            Стоимость зависит от толщины
+                                        </div>
+                                    </div>
+                                    <div class="list__bottom-options options">
+                                        <div class="options_item options-name">
+                                            Штукатурка стен цементная
+                                        </div>
+                                        <div class="options_item options-number">
+                                            М2
+                                        </div>
+                                        <div class="options_item options-price">
+                                            450
+                                        </div>
+                                        <div class="options_item options-info">
+                                            Стоимость зависит от толщины
+                                        </div>
+                                    </div>
+                                    <div class="list__bottom-options options">
+                                        <div class="options_item options-name">
+                                            Штукатурка стен цементная
+                                        </div>
+                                        <div class="options_item options-number">
+                                            М2
+                                        </div>
+                                        <div class="options_item options-price">
+                                            450
+                                        </div>
+                                        <div class="options_item options-info">
+                                            Стоимость зависит от толщины
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="tabs__tab tab_dropdown">
-                    <div class="tab__header">
-                        Малярно штукатурные
-                        <svg class="caret" width="21" height="11" viewBox="0 0 21 11" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.4607 10.2925L20.051 0.476897H0.870348L10.4607 10.2925Z" fill="black"/>
-                        </svg>
-                    </div>
-                    <div class="tab__list">
-                        <div class="list__top chars_list">
-                            <div class="chars_list-item list__top-name">
-                                Наименование
-                                <br>
-                                ремонтных работ
-                            </div>
-                            <div class="chars_list-item list__top-number">
-                                Ед. изм
-                            </div>
-                            <div class="chars_list-item list__top-price">
-                                Цена за ед. (Руб)
-                            </div>
-                            <div class="chars_list-item list__top-info">
-                                Дополнительная информация
-                            </div>
-                        </div>
-                        <div class="list__bottom">
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-                            <div class="list__bottom-options options">
-                                <div class="options_item options-name">
-                                    Штукатурка стен цементная
-                                </div>
-                                <div class="options_item options-number">
-                                    М2
-                                </div>
-                                <div class="options_item options-price">
-                                    450
-                                </div>
-                                <div class="options_item options-info">
-                                    Стоимость зависит от толщины
-                                </div>
-                            </div>
-
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="list__bottom-options">-->
-                            <!--                                    <div class="options-name">-->
-                            <!--                                        Штукатурка стен цементная-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-number">-->
-                            <!--                                        М2-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-price">-->
-                            <!--                                        450-->
-                            <!--                                    </div>-->
-                            <!--                                    <div class="options-info">-->
-                            <!--                                        Стоимость зависит от толщины-->
-                            <!--                                    </div>-->
-                            <!--                                </div>-->
                         </div>
                     </div>
                 </div>
@@ -4625,9 +4507,12 @@
         </div>
     </div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="assets/js/jquery-3.7.1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="assets/slick/slick.js"></script>
+<script src="assets/slick/slick.min.js"></script>
+<script src="assets/js/sliders.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>-->
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="assets/js/search.js"></script>
 <script src="assets/js/btn_block.js"></script>

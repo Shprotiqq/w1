@@ -54,7 +54,7 @@ variantBtn.forEach(el => {
         let parent = self.closest('.variants_item');
         let currentSlide = parent.closest('.quiz_variants ')
         parent.classList.add('input_quiz-active')
-        currentSlide.classList.add('input_quiz-disabled')
+        // currentSlide.classList.add('input_quiz-disabled')
         variants.push(variant)
         localStorage.setItem('quiz_answers', variants)
 
