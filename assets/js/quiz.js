@@ -53,8 +53,8 @@ variantBtn.forEach(el => {
         let variant = self.value;
         let parent = self.closest('.variants_item');
         let currentSlide = parent.closest('.quiz_variants ')
+        $('.variants_item').removeClass('input_quiz-active')
         parent.classList.add('input_quiz-active')
-        // currentSlide.classList.add('input_quiz-disabled')
         variants.push(variant)
         localStorage.setItem('quiz_answers', variants)
 

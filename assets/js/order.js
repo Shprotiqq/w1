@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     });
 
-    $('.order_modal-overlay, .button_submit').click(function () {
+    $('.order_modal-overlay, .button_submit, .modal-close').click(function () {
         $('.order_modal').fadeOut();
     });
 })

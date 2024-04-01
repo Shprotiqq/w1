@@ -92,6 +92,6 @@ $('.button_compare').click(function () {
     }
 })
 
-$('.compare_modal-overlay, .button_submit').click(function () {
+$('.compare_modal-overlay, .button_submit, .modal-close').click(function () {
     $('.compare_modal').fadeOut();
 });

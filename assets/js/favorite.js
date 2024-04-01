@@ -92,7 +92,7 @@ $('.button_favorites').click(function () {
     }
 })
 
-$('.favorite_modal-overlay, .button_submit').click(function () {
+$('.favorite_modal-overlay, .button_submit, .modal-close').click(function () {
     $('.favorite_modal').fadeOut();
 });
 
