@@ -61,6 +61,7 @@ hr {
 
 
 .button {
+    font-family: "Vela Sans", sans-serif;
     cursor: pointer;
     border: none;
     color: #fff;
@@ -563,9 +564,6 @@ hr {
     transition: background-color, color 0.3s;
 }
 
-.banner_img {
-
-}
 
 .buttons_block-buttons {
     position: absolute;
@@ -2713,7 +2711,7 @@ hr {
     height: 46px;
     position: absolute;
     top: 133px;
-
+    left: 87px;
 }
 
 .input_quiz-active svg {

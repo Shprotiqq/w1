@@ -1,6 +1,5 @@
 const progressBar = document.getElementById("progress");
 const variantBtn = document.querySelectorAll('.input_quiz');
-const variants = []
 let prev = document.querySelector(".button-prev");
 let next = document.querySelector(".button-next");
 const circles = document.querySelectorAll(".progress_circle");
@@ -47,6 +46,7 @@ const nextSlide = () => {
     currentStep = nextStep;
 }
 
+
 variantBtn.forEach(el => {
     el.addEventListener('click', e => {
         let self = e.currentTarget;
@@ -55,8 +55,6 @@ variantBtn.forEach(el => {
         let currentSlide = parent.closest('.quiz_variants ')
         $('.variants_item').removeClass('input_quiz-active')
         parent.classList.add('input_quiz-active')
-        variants.push(variant)
-        localStorage.setItem('quiz_answers', variants)
 
         if (!currentStep.classList.contains('quiz_variants__last-page')) {
             setTimeout(() => {
