@@ -751,6 +751,11 @@ hr {
     background-color: #00CA81;
 }
 
+.button-next:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .button-quiz:hover {
     transition: background-color 0.3s;
     background-color: #02b373;
@@ -760,7 +765,17 @@ hr {
     transform: scale(0.98);
 }
 
-.button-quiz:disabled {
+.button-next-final {
+    background-color: #000;
+    cursor: not-allowed;
+}
+
+.button-next-final:hover {
+    background-color: #000;
+    cursor: not-allowed;
+}
+
+.button-prev:disabled {
     background-color: #000;
     cursor: not-allowed;
 }

@@ -3,10 +3,26 @@ const variantBtn = document.querySelectorAll('.input_quiz');
 let prev = document.querySelector(".button-prev");
 let next = document.querySelector(".button-next");
 const circles = document.querySelectorAll(".progress_circle");
+const currentField = document.querySelectorAll('.quiz_variants')
 const slides = $('.quiz_variants');
 var currentStep = slides[0];
 var currentSlide = 0;
 let currentActive = 1;
+
+next.disabled = true
+$('.input_quiz').on('click', function(event) {
+    const fieldset = $(event.target).closest('fieldset')
+    $(fieldset).find('.variants_item').removeClass('input_quiz-active')
+    $(event.target).closest('.variants_item').toggleClass('input_quiz-active')
+    if (!currentStep.classList.contains('quiz_variants__last-page')) {
+        next.disabled = false
+        setTimeout(() => {
+            nextSlide();
+        }, 300);
+        } else {
+            return;
+        }
+})
 
 const update = () => {
     let width = 0;
@@ -23,9 +39,11 @@ const update = () => {
     if (currentActive === 1) {
         prev.disabled = true;
     } else if (currentActive === circles.length) {
-        next.disabled = true
+        next.classList.add ('button-next-final');
+        next.disabled = true;
     } else {
         prev.disabled = false;
+        next.classList.remove('button-next-final');
         next.disabled = false;
     }
 };
@@ -44,27 +62,9 @@ const nextSlide = () => {
     currentStep.classList.remove('quiz_variants-active');
     nextStep.classList.add('quiz_variants-active');
     currentStep = nextStep;
+    next.disabled = true;
 }
 
-
-variantBtn.forEach(el => {
-    el.addEventListener('click', e => {
-        let self = e.currentTarget;
-        let variant = self.value;
-        let parent = self.closest('.variants_item');
-        let currentSlide = parent.closest('.quiz_variants ')
-        $('.variants_item').removeClass('input_quiz-active')
-        parent.classList.add('input_quiz-active')
-
-        if (!currentStep.classList.contains('quiz_variants__last-page')) {
-            setTimeout(() => {
-                nextSlide();
-            }, 300);
-        } else {
-            return;
-        }
-    })
-})
 prev.addEventListener("click", () => {
     currentActive--;
     if (currentActive < 1) {
