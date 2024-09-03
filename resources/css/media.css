@@ -1,0 +1,830 @@
+@media (max-width: 1200px) {
+    .slick-slide {
+        margin: 0 55px;
+    }
+    .container {
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .quiz {
+        padding-top: 86px;
+    }
+    .catalog {
+        padding-top: 85px;
+    }
+    .catalog_additional {
+        padding-top: 75px;
+    }
+    .portfolio {
+        padding-top: 75px;
+    }
+    .price_list {
+        padding-top: 75px;
+    }
+    .tariff_block {
+        padding-top: 75px;
+    }
+    .reviews {
+        padding-top: 60px;
+    }
+    .certificates {
+        padding-top: 75px;
+    }
+    .delivery {
+        padding-top: 75px;
+    }
+    .information {
+        padding-top: 75px;
+    }
+    .description {
+        padding-top: 75px;
+    }
+    .faq {
+        padding-top: 75px;
+    }
+    .contacts {
+        padding-top: 75px;
+    }
+    .navigation {
+        gap: 0;
+        justify-content: space-between;
+    }
+    .additional_buttons {
+        gap: 5px;
+        justify-content: space-between;
+    }
+    .additional_buttons-left {
+        gap: 0;
+        justify-content: space-between;
+    }
+    .additional_buttons-right {
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .catalog__bottom {
+        justify-content: space-evenly;
+    }
+    .catalog_additional-cards {
+        justify-content: space-evenly;
+    }
+    .reviews_block {
+        justify-content: space-evenly;
+    }
+    .certificates-block {
+        justify-content: space-evenly;
+    }
+    .rating_cards {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .img__gallery {
+        justify-content: space-evenly;
+    }
+    .videos__block {
+        justify-content: center;
+    }
+}
+@media (max-width: 1075px) {
+    .form-bottom .sideinfo {
+        padding-left: 10px;
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+    }
+    .promotion_action {
+        padding: 0;
+    }
+    .contacts_bottom {
+        gap: 0;
+        justify-content: space-evenly;
+    }
+    .additional_card {
+        display: none;
+    }
+    .quiz_bottom {
+        justify-content: center;
+    }
+    .info_list {
+        gap: 5px;
+    }
+    .banner_info {
+        z-index: 2;
+        backdrop-filter: blur(2px);
+    }
+    .banner_img {
+        position: absolute;
+        right: 10px;
+    }
+    .contacts_number {
+        flex-direction: row;
+        gap: 15px;
+    }
+    .contacts_info {
+        display: flex;
+    }
+    .contacts_address {
+        padding-top: 0;
+    }
+    .contacts_email {
+        padding-top: 0;
+    }
+    .contacts_top {
+        gap: 45px;
+        justify-content: center;
+    }
+    .catalog_promotion {
+        gap: 0;
+    }
+}
+@media (max-width:998px) {
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+    }
+    .header_burger::before,
+    .header_burger::after {
+        content: '';
+        background-color: #353535;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 25px;
+    }
+    .header_burger::before {
+        top: 0;
+    }
+    .header_burger::after {
+        bottom: 0;
+    }
+    .header_burger span {
+        position: absolute;
+        background-color: #353535;
+        left: 25px;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+    }
+    .company_additional {
+        display: none;
+    }
+    .navigation {
+        justify-content: space-between;
+    }
+    .navigation__menu {
+        display: none;
+        flex-direction: column;
+    }
+    .navigation__menu-active {
+        display: flex;
+    }
+    .header_burger-active::before {
+        transform: rotate(45deg);
+        transition: all 0.3s ease 0.2s;
+    }
+    .header_burger-active::after {
+        transform: rotate(-45deg);
+        transition: all 0.3s ease 0.2s;
+    }
+    .header_burger-active span {
+        transform: scale(0);
+    }
+    .navigation__list {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        flex-direction: column;
+        z-index: 4;
+        background-color: #F6F6F6;
+        height: auto;
+        width: 50%;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .navigation__button {
+        align-items: center;
+    }
+    .company-logo {
+        width: auto;
+    }
+    .additional_buttons-left {
+        gap: 20px;
+    }
+
+    .delivery_action-btn_area {
+        flex-wrap: nowrap;
+    }
+    .btn_area-row {
+        justify-content: center;
+    }
+    .search-button {
+        display: none;
+    }
+    .search {
+        max-width: 198px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .search-area {
+        width: 100%;
+    }
+    .search:hover > .search-area {
+        width: 100%;
+        padding: 0;
+    }
+    .acc {
+        display: none;
+    }
+}
+@media (max-width: 880px) {
+    .slick-slide {
+        margin: 0 40px;
+    }
+    .slick-slide {
+        opacity: 0.4;
+    }
+    .slick-center {
+        opacity: 1;
+    }
+    .slick-active {
+        opacity: 1;
+    }
+}
+@media (max-width: 832px) {
+    .buttons_block-buttons button {
+        height: 67.65px;
+        width: 67.65px;
+    }
+    .modal-close {
+        display: block;
+    }
+    .favorite_modal-area {
+        margin-top: 15px;
+    }
+    .favorite_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .favorite_modal-title {
+        font-size: 30px;
+    }
+    .favorite_list {
+        max-height: 205px;
+    }
+    .favorite_modal-text {
+        font-size: 25px;
+    }
+    .favorite_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .favorite_modal-input input {
+        width: auto;
+    }
+    .cart_modal-area {
+        margin-top: 15px;
+    }
+    .cart_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .cart_modal-title {
+        font-size: 30px;
+    }
+    .cart_list {
+        max-height: 205px;
+    }
+    .cart_modal-text {
+        font-size: 25px;
+    }
+    .cart_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .cart_modal-input input {
+        width: auto;
+    }
+    .compare_modal-area {
+        margin-top: 15px;
+    }
+    .compare_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .compare_modal-title {
+        font-size: 30px;
+    }
+    .compare_list {
+        max-height: 205px;
+    }
+    .compare_modal-text {
+        font-size: 25px;
+    }
+    .compare_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .compare_modal-input input {
+        width: auto;
+    }
+    .order_modal-area {
+        margin-top: 15px;
+    }
+    .order_modal-content {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .order_modal-title {
+        font-size: 27px;
+    }
+    .order_list {
+        max-height: 205px;
+    }
+    .order_modal-text {
+        font-size: 25px;
+    }
+    .order_modal-input {
+        flex-direction: column;
+        padding: 0;
+    }
+    .order_modal-input input {
+        width: auto;
+    }
+    .form-bottom {
+        gap: 45px;
+    }
+    .requirements_list-item {
+        display: block;
+    }
+}
+
+@media (max-width: 750px) {
+    .quiz_number {
+        justify-content: center;
+    }
+    .quiz_bottom {
+        flex-direction: column;
+    }
+    .button_call {
+        display: none;
+    }
+    .additional_buttons {
+        gap: 30px;
+    }
+    .catalog_button {
+        display: none;
+    }
+    .catalog_area-left::before {
+        display: none;
+    }
+    .search {
+        max-width: 300px;
+    }
+    .promotion-title {
+        font-size: 35px;
+    }
+    .promotion-desc {
+        font-size: 15px;
+    }
+    .form_block-title {
+        font-size: 40px;
+    }
+    .tariff_block-desc {
+        font-size: 14px;
+    }
+    .form_block-input_name input {
+        width: 200px;
+        font-size: 13px;
+    }
+    .form_block-input_phone input {
+        width: 200px;
+        font-size: 13px;
+    }
+    .requirements_list-item {
+        font-size: 15px;
+    }
+    .catalog_promotion {
+        flex-wrap: wrap;
+    }
+    .quiz_card {
+        width: auto;
+        height: auto;
+    }
+    .quiz_variants-active {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quiz_buttons {
+        padding-left: 0;
+    }
+    .catalog__buttons {
+        justify-content: center;
+    }
+    .catalog_promotion {
+        justify-content: center;
+    }
+    .promotion-text {
+        align-items: center;
+    }
+    .about_general {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .general_desc {
+        align-items: center;
+    }
+    .prices_title {
+        font-size: 48px;
+    }
+    .tariff_block-title {
+        font-size: 45px;
+    }
+    .additional_features {
+        justify-content: unset;
+        gap: 40px;
+    }
+}
+@media (max-width: 690px) {
+    .banner_img {
+        display: none;
+    }
+    .contacts_bottom {
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .contacts_map {
+        display: none;
+    }
+    .contacts_number-link {
+        font-size: 30px;
+    }
+    .contacts_number-hours {
+        font-size: 18px;
+    }
+    .button-contacts {
+        width: 218px;
+    }
+    .contacts_requisites-title {
+        font-size: 45px;
+    }
+    .contacts_requisites-item {
+        font-size: 17px;
+    }
+    .contacts_vacancies-title {
+        font-size: 45px;
+    }
+    .contacts_vacancies-link {
+        font-size: 20px;
+    }
+    .button_atf {
+        width: auto;
+    }
+    .footer_block-left {
+        width: auto;
+        gap: 10px;
+    }
+    .footer-name {
+        padding-left: 0;
+    }
+    .footer-data {
+        padding-top: 0;
+    }
+    .form-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts_info {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 590px) {
+    .contacts {
+        padding-top: 30px;
+    }
+    .faq {
+        padding-top: 30px;
+    }
+    .description {
+        padding-top: 30px;
+    }
+    .product_rating {
+        padding-top: 30px;
+    }
+    .discounts {
+        padding-top: 35px;
+    }
+    .information_payment {
+        padding-top: 30px;
+    }
+    .information {
+        padding-top: 35px;
+    }
+    .delivery {
+        padding-top: 35px;
+    }
+    .certificates {
+        padding-top: 35px;
+    }
+    .reviews {
+        padding-top: 30px;
+    }
+    .about_team {
+        padding-top: 35px;
+    }
+    .about_general {
+        padding-top: 30px;
+    }
+    .form_block {
+        padding-bottom: 35px;
+    }
+    .tariff_block {
+        padding-top: 35px;
+    }
+    .prices-main {
+        padding-top: 35px;
+    }
+    .price_list {
+        padding-top: 35px;
+    }
+    .videos__title {
+        padding-top: 35px;
+    }
+    .portfolio {
+        padding-top: 35px;
+    }
+    .catalog_promotion {
+        padding-top: 35px;
+    }
+    .catalog_additional {
+        padding-top: 35px;
+    }
+    .catalog {
+        padding-top: 35px;
+    }
+    .quiz {
+        padding-top: 35px;
+    }
+    .quiz_progress {
+        display: none;
+    }
+    .quiz_buttons {
+        justify-content: center;
+    }
+    .quiz_bottom {
+        flex-direction: column;
+    }
+    .option_bottom-expand::after,
+    .option_bottom-expand::before {
+        display: none;
+    }
+    .additional_features {
+        gap: 5px;
+    }
+    .guarantees_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .guarantees_desc {
+        font-size: 20px;
+    }
+    .payment_main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment_desc {
+        font-size: 20px;
+        align-items: center;
+    }
+    .promo_action-row {
+        flex-direction: column;
+    }
+    .promotion_action-area {
+        align-items: unset;
+    }
+    .videos__block img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .contacts_address {
+        width: auto;
+    }
+    .info_list {
+        height: auto;
+    }
+    .banner_info {
+        height: auto;
+        gap: 10px;
+    }
+    .info_buttons {
+        flex-direction: column;
+        height: auto;
+    }
+}
+@media (max-width: 465px) {
+    .additional_buttons {
+        height: auto;
+    }
+    .info_title {
+        font-size: 49px;
+        line-height: 40px;
+    }
+    .search-area {
+        border-radius: 10px;
+    }
+    .form_block-input_name {
+        display: flex;
+        justify-content: center;
+    }
+    .form_block-input_phone {
+        display: flex;
+        justify-content: center;
+    }
+    .form_block-title {
+        display: flex;
+        justify-content: center;
+        font-size: 33px;
+    }
+    .additional_buttons {
+        max-width: 100%;
+    }
+    .about__name {
+        font-size: 26px;
+    }
+    .requirements_list-item {
+        display: flex;
+    }
+    .card_option__desc {
+        width: auto;
+        height: auto;
+        font-size: 17px;
+    }
+    .card_option {
+        width: 100%;
+    }
+    .chars_list-item {
+        width: auto;
+        height: auto;
+    }
+    .list__top {
+        font-size: 12px;
+    }
+    .prices_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title {
+        font-size: 39px;
+    }
+    .portfolio {
+        width: auto;
+    }
+    .form__phone-input input {
+        width: auto;
+    }
+    .form__name-input input {
+        width: auto;
+    }
+    .footer_block-left {
+        flex-direction: column;
+    }
+    .footer_right {
+        width: auto;
+        font-size: 12px;
+    }
+    .certificates-title {
+        font-size: 41px;
+    }
+    .contacts_number {
+        flex-wrap: wrap;
+    }
+    .discounts_block img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .delivery_title {
+        font-size: 41px;
+    }
+    .general_img img {
+        width: 100%;
+        height: 100%;
+    }
+    .img__gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .payment_img {
+        width: auto;
+        height: auto;
+    }
+    .guarantees_img {
+        width: auto;
+        height: auto;
+    }
+    .delivery_action-btn_area {
+        flex-wrap: wrap;
+    }
+    .promotion_action-area {
+        justify-content: space-evenly;
+    }
+    .form__title {
+        padding-left: 0;
+    }
+    .form__button {
+        display: flex;
+        justify-content: center;
+    }
+    .tariff_block-title {
+        font-size: 35px;
+    }
+    .card_option-content {
+        padding: 29.2px 0;
+    }
+    .adv_list__item {
+        width: auto;
+    }
+    .review_block-card {
+        width: auto;
+        height: auto;
+    }
+    .review_block-card-content {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .review_top {
+        padding-left: 0;
+    }
+    .review_bottom {
+        padding: 0;
+    }
+    .form_block-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    .delivery_action-btn_area {
+        gap: 0;
+    }
+    .contacts_vacancies-title {
+        font-size: 40px;
+    }
+    .contacts_requisites-title {
+        font-size: 40px;
+    }
+    .contacts_requisites-item {
+        gap: 0;
+        font-size: 15px;
+    }
+    .search span {
+        display: none;
+    }
+    .compare span {
+        display: none;
+    }
+    .favorites span {
+        display: none;
+    }
+}
+@media (max-width: 400px) {
+    .company_name {
+        display: none;
+    }
+    .catalog__title {
+        font-size: 33px;
+    }
+    .prices_title {
+        font-size: 35px;
+    }
+    .catalog_additional-title {
+        font-size: 27px;
+    }
+    .contacts_address-address {
+        font-size: 20px;
+    }
+    .contacts_email-email {
+        font-size: 20px;
+    }
+    .contacts_requisites-title {
+        font-size: 35px;
+    }
+    .contacts_vacancies-title {
+        font-size: 35px;
+    }
+    .form_block-content {
+        padding-left: 0;
+    }
+    .slick-dots {
+        bottom: -50px;
+    }
+}
+@media (max-width: 360px) {
+    .review_top-rate {
+        display: none;
+    }
+}

@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Black"),
+    url("/fonts/Montserrat-Black.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-BlackItalic"),
+    url("/fonts/Montserrat-BlackItalic.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Bold"),
+    url("/fonts/Montserrat-Bold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-BoldItalic"),
+    url("/fonts/Montserrat-BoldItalic.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Medium"),
+    url("/fonts/Montserrat-Medium.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-MediumItalic"),
+    url("/fonts/Montserrat-MediumItalic.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Regular"),
+    url("/fonts/Montserrat-Regular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Italic"),
+    url("/fonts/Montserrat-Italic.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-Light"),
+    url("/fonts/Montserrat-Light.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Montserrat-";
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+    src: local("Montserrat-"),
+    local("Montserrat-LightItalic"),
+    url("/fonts/Montserrat-LightItalic.woff2") format('woff2');
+}
